@@ -6,13 +6,13 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    render json: @posts, 
+    render json: @posts, include: :comments
   end
 
   # GET /posts/1
   def show
     @post = Post.find(params[:id])
-    render json: @post, include: { comments: {include: :likes} }
+    render json: @post
   end
 
   # POST /posts
@@ -20,10 +20,18 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = @current_user
     if @post.save
-      render json: @post, status: :created, location: @post
+      render json: @post, status: :created
     else
       render json: @post.errors, status: :unprocessable_entity
     end
+  end
+
+  def add_comment
+    @post = Post.find(params[:id])
+    @comment = Comment.find(params[:id])
+    @post.comments << @comment 
+
+    render json: @post, include: :comments
   end
 
   # PATCH/PUT /posts/1
@@ -50,4 +58,5 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:content)
     end
+  
 end

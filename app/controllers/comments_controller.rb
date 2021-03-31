@@ -6,21 +6,23 @@ class CommentsController < ApplicationController
   def index
     @comments = Comment.all
 
-    render json: @comments
+    render json: @comments 
   end
 
   # GET /comments/1
   def show
+    @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
-    render json: @comment, include: :likes
+    render json: @comment
   end
 
   # POST /comments
   def create
-    @comment = Comment.new(comment_params)
+    @post = Post.find(params[:post_id])
+    @comment = Comment.where(post_id: @post.id).new(comment_params)
     @comment.user = @current_user
     if @comment.save
-      render json: @comment, status: :created, location: @comment
+      render json: @comment, status: :created 
     else
       render json: @comment.errors, status: :unprocessable_entity
     end
