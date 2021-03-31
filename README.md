@@ -56,25 +56,22 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
-![Dummy Link](url)
+- Desktop Landing/Login page
+![image](https://user-images.githubusercontent.com/78034272/113164800-703ad280-920f-11eb-8be2-40c30ec0d362.png)
 
-- Desktop Landing
+- Desktop Register Page
+![image](https://user-images.githubusercontent.com/78034272/113165045-a8daac00-920f-11eb-9cb9-7808eda11d77.png)
 
-![Dummy Link](url)
+- Home Page
+![image](https://user-images.githubusercontent.com/78034272/113165468-edfede00-920f-11eb-80b8-a491eeb1b0fe.png)
 
-- Desktop Hero
+- Comments Page
+![image](https://user-images.githubusercontent.com/78034272/113165675-1dade600-9210-11eb-9035-53e1283cbdaf.png)
 
-![Dummy Link](url)
+- Profile Page
+![image](https://user-images.githubusercontent.com/78034272/113165601-0b33ac80-9210-11eb-8a7b-8eb1800b39f3.png)
 
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
 
 - Tablet Resource Index
 
