@@ -41,7 +41,7 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | _Front-end component framework_ |
-|   React Router   | _Fron-end library to set up routes and links._ |
+| React Router DOM | _Fron-end library to set up routes and links._ |
 |   Materials UI   | _Component library for interface styling._ |
 | Styled Components| _Component Library for styling written with a mixture of JavaScript and CSS within the same component._ |
 |  Ruby on Rails   | _Framework for building back ends with Ruby._ |
