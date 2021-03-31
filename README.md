@@ -127,17 +127,18 @@ src
 ### Server (Back End)
 
 #### ERD Model
+[ERD Link](https://drive.google.com/file/d/1ClUCNpH2cA8EmJ5F5ukjK_Mu-ZXtWqRy/view?usp=sharing)
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+![image](https://user-images.githubusercontent.com/78034272/113075731-85761980-919b-11eb-8384-bca846c5444c.png)
 
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+
 <br>
 
 ***
 
 ## Post-MVP
 - Sorting posts from most popular on the landing page.
-- Only display posts from a 5 mile radius of the user's location.
+- Only display posts from within a 5 mile radius of the user's location.
 
 
 ## Code Showcase
