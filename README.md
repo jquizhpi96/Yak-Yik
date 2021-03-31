@@ -72,7 +72,7 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 ![image](https://user-images.githubusercontent.com/78034272/113174028-fb1fcb00-9217-11eb-9349-bec0ffbd7031.png)
 
 - Profile Page
-![image](https://user-images.githubusercontent.com/78034272/113174089-070b8d00-9218-11eb-932f-4590b9969e97.png)
+![image](https://user-images.githubusercontent.com/78034272/113174518-75504f80-9218-11eb-99a1-a78ef0e0c135.png)
 
 - Edit Post Page
 ![image](https://user-images.githubusercontent.com/78034272/113174152-168ad600-9218-11eb-92d8-3a3f44a565ef.png)
