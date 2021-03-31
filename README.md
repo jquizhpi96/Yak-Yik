@@ -92,7 +92,7 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 
 #### Component Tree
 
-![image](https://user-images.githubusercontent.com/78034272/113087194-1c010580-91b1-11eb-98fd-a2bc106021b7.png)
+![image](https://user-images.githubusercontent.com/78034272/113180711-0c200a80-921f-11eb-94d8-1765576593fb.png)
 
 
 
