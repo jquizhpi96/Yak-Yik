@@ -56,6 +56,8 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 
 #### Wireframes
 
+  - [link to wireframes](https://xd.adobe.com/view/672f5c8e-fad4-41f7-a06b-0bf421d716b8-327c/)
+
 
 - Desktop Landing/Login page
 ![image](https://user-images.githubusercontent.com/78034272/113164800-703ad280-920f-11eb-8be2-40c30ec0d362.png)
