@@ -161,7 +161,7 @@ src
 ***
 
 ## Post-MVP
-- Sorting posts from most popular on the landing page.
+- Sorting posts from most popular on the home page.
 - Only display posts from within a 5 mile radius of the user's location.
 
 
