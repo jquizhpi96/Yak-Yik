@@ -83,9 +83,8 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
+![image](https://user-images.githubusercontent.com/78034272/113077213-b3a92880-919e-11eb-8cb7-08ab6c1d952c.png)
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
 
 #### Component Architecture
 
