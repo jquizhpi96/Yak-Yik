@@ -135,12 +135,11 @@ src
 |   Backend Setup     |    H     |     5 hrs      |      TBD      |     TBD     |
 | User authentication |    H     |     3 hrs      |      TBD      |     TBD     |
 |     Seed Data       |    M     |     3 hrs      |      TBD      |     TBD     |
-| Creating Components |    H     |     8 hrs      |      TBD      |     TBD     |
-|    Landing Page     |    H     |     3 hrs      |      TBD      |     TBD     |
-|        CRUD         |    H     |     5 hrs      |      TBD      |     TBD     |
-|   Adanced Styling   |    M     |     5 hrs      |      TBD      |     TBD     |
+| Creating Components |    H     |     12 hrs     |      TBD      |     TBD     |
+|        CRUD         |    H     |     8 hrs      |      TBD      |     TBD     |
+|   Advanced Styling  |    M     |     5 hrs      |      TBD      |     TBD     |
 |     Deployment      |    H     |     1 hrs      |      TBD      |     TBD     |
-| TOTAL               |          |     35 hrs     |      TBD      |     TBD     |
+| TOTAL               |          |     37 hrs     |      TBD      |     TBD     |
 
 
 <br>
