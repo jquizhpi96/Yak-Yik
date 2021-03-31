@@ -83,8 +83,7 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 
 #### Component Tree
 
-![image](https://user-images.githubusercontent.com/78034272/113077213-b3a92880-919e-11eb-8cb7-08ab6c1d952c.png)
-
+![image](https://user-images.githubusercontent.com/78034272/113086868-882f3980-91b0-11eb-8175-836d807f75b0.png)
 
 #### Component Architecture
 
