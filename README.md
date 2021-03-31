@@ -126,7 +126,6 @@ src
 ### Server (Back End)
 
 #### ERD Model
-[ERD Link](https://drive.google.com/file/d/1ClUCNpH2cA8EmJ5F5ukjK_Mu-ZXtWqRy/view?usp=sharing)
 
 ![image](https://user-images.githubusercontent.com/78034272/113075731-85761980-919b-11eb-8384-bca846c5444c.png)
 
