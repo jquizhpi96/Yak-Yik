@@ -81,12 +81,12 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 - Mobile Home Page
 
 
-![image](https://user-images.githubusercontent.com/78034272/113189709-7c338e00-9229-11eb-8a4c-b27bf49d273e.png)
+![image](https://user-images.githubusercontent.com/78034272/113190171-03810180-922a-11eb-90e8-1deac07d8a24.png)
 
 - Mobile Profile Page
 
 
-![image](https://user-images.githubusercontent.com/78034272/113189742-86558c80-9229-11eb-87d1-a2ab5edd4bcc.png)
+![image](https://user-images.githubusercontent.com/78034272/113190199-0a0f7900-922a-11eb-8f21-7f88f0432abe.png)
 
 - Mobile Comments Page
 
