@@ -31,6 +31,7 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 - User authentication
 - Full CRUD
 - User associations with posts, comments, and likes
+- Create a Modal for when user decides to delete a post or comment
 - keep record of user's likes 
 
 <br>
