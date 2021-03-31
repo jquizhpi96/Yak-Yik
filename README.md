@@ -66,20 +66,25 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 ![image](https://user-images.githubusercontent.com/78034272/113165045-a8daac00-920f-11eb-9cb9-7808eda11d77.png)
 
 - Home Page
-![image](https://user-images.githubusercontent.com/78034272/113165468-edfede00-920f-11eb-80b8-a491eeb1b0fe.png)
+![image](https://user-images.githubusercontent.com/78034272/113173981-efcc9f80-9217-11eb-890b-6aec42efdae6.png)
 
 - Comments Page
-![image](https://user-images.githubusercontent.com/78034272/113165675-1dade600-9210-11eb-9035-53e1283cbdaf.png)
+![image](https://user-images.githubusercontent.com/78034272/113174028-fb1fcb00-9217-11eb-9349-bec0ffbd7031.png)
 
 - Profile Page
-![image](https://user-images.githubusercontent.com/78034272/113165601-0b33ac80-9210-11eb-8a7b-8eb1800b39f3.png)
+![image](https://user-images.githubusercontent.com/78034272/113174089-070b8d00-9218-11eb-932f-4590b9969e97.png)
+
+- Edit Post Page
+![image](https://user-images.githubusercontent.com/78034272/113174152-168ad600-9218-11eb-92d8-3a3f44a565ef.png)
 
 
-- Tablet Resource Index
+- Mobile Home Page
+![image](https://user-images.githubusercontent.com/78034272/113173436-5dc49700-9217-11eb-921e-e2bb9a47f435.png)
 
-![Dummy Link](url)
+- Mobile Profile Page
+![image](https://user-images.githubusercontent.com/78034272/113173488-6a48ef80-9217-11eb-9868-bdb5be44c191.png)
 
-- Mobile Resource Index
+
 
 #### Component Tree
 
