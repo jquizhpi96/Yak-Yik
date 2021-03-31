@@ -2,7 +2,7 @@
 
 ## Overview
 
-_**Yak Yik* is a social media smartphone application allowed people to create and view discussion threads while being anonymous. All users have the ability to contribute to the stream by writing, responding, and liking posts. Yak Yik is built on a Ruby on Rails backend and React front end.
+**Yak Yik** is a social media smartphone application allowed people to create and view discussion threads while being anonymous. All users have the ability to contribute to the stream by writing, responding, and liking posts. Yak Yik is built on a Ruby on Rails backend and React front end.
 
 <br>
 
