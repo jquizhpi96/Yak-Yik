@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Yak Yik** is a social media smartphone application allowed people to create and view discussion threads while being anonymous. All users have the ability to contribute to the stream by writing, responding, and liking posts. Yak Yik is built on a Ruby on Rails backend and React front end.
+**Yak Yik** is a social media smartphone application based on a discontinued app, Yik Yak, that allows people to create and view discussion threads while being anonymous. All users have the ability to contribute to the stream by writing, responding, and liking posts. Yak Yik is built on a Ruby on Rails backend and React front end.
 
 <br>
 
@@ -24,7 +24,7 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _	Front-end component framework_ |
+|      React       | _Front-end component framework_ |
 |   React Router   | _Fron-end library to set up routes and links._ |
 |   Materials UI   | _Component library for interface styling._ |
 | Styled Components| _Component Library for styling written with a mixture of JavaScript and CSS within the same component._ |
