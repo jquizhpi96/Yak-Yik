@@ -93,14 +93,34 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
 |__ components/
-      |__ Header.jsx
+   |__ Modal.jsx
+|__ layout/
+   |__ Nav.jsx
+   |__ Layout.jsx
+   |__ Footer.jsx
+|__ Containers 
+   |__ MainContainer.jsx
+|__ screens/
+   |__ Login.jsx
+   |__ Register.jsx
+   |__ Posts.jsx
+   |__ Post.jsx
+   |__ PostCreate.jsx
+   |__ PostEdit.jsx
+   |__ Comment.jsx
+   |__ CommentCreate.jsx
+   |__ CommentEdit.jsx
+   |__ UserProfile.jsx
+   
+                 
 |__ services/
+      |__ apiConfig.js
+      |__ auth.js
+      |__ users.js
+      |__ posts.js
+      |__ comments.js
+      |__ likes.js
 
 ```
 
