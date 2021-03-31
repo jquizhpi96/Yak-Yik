@@ -90,8 +90,6 @@ _The MVP for Yak Yik will feature user authentication with signup and login and 
 
 #### Component Architecture
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
 ``` structure
 
 src
