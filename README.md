@@ -120,15 +120,15 @@ src
    |__ CommentCreate.jsx
    |__ CommentEdit.jsx
    |__ UserProfile.jsx
-   
-                 
+   |__ UserLikes.jsx
+                   
 |__ services/
       |__ apiConfig.js
       |__ auth.js
       |__ users.js
       |__ posts.js
       |__ comments.js
-      |__ likes.js
+      |__ userLikes.js
 
 ```
 
