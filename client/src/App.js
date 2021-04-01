@@ -1,23 +1,71 @@
-import logo from './logo.svg';
 import './App.css';
+import Layout from './layouts/Layout';
+import { useState, useEffect } from 'react';
+import { Switch, Route, useHistory } from 'react-router-dom';
+
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import MainContainer from './containers/MainContainer';
+import Login from './screens/Login';
+import Register from './screens/Register';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+  const history = useHistory()
+
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    }
+    handleVerify();
+  }, [])
+  const handleLogin = async (formData) => {
+    const userData = await loginUser(formData);
+    setCurrentUser(userData);
+    history.push('/');
+  }
+
+  const handleRegister = async (formData) => {
+    const userData = await registerUser(formData);
+    setCurrentUser(userData);
+    history.push('/');
+  }
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout
+        currentUser={currentUser}
+        handleLogout={handleLogout}
+      >
+        <Switch>
+          <Route path='/login'>
+            <Login
+              handleLogin={handleLogin}
+            />
+          </Route>
+          <Route path='/register'>
+            <Register
+              handleRegister={handleRegister}
+            />
+          </Route>
+          {currentUser && (
+            <>
+              <Route path='/'>
+                <MainContainer
+                  currentUser={currentUser}
+                />
+              </Route>
+            </>
+          )}
+
+        </Switch>
+      </Layout>
     </div>
   );
 }
