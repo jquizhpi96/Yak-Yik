@@ -2,7 +2,8 @@ import './App.css';
 import Layout from './layouts/Layout';
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-
+import { useParams } from 'react-router-dom';
+import { getOneUser } from "./services/user";
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 import { getAllPosts } from "./services/posts";
@@ -19,6 +20,9 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [posts, setPosts] = useState([]);
   const history = useHistory()
+  const [user, setUser] = useState([])
+  const { id } = useParams();
+
 
   useEffect(() => {
     const handleVerify = async () => {
@@ -52,6 +56,9 @@ function App() {
     };
     fetchPosts();
   }, []);
+
+
+
 
 
   const handleUpdate = async (id, postData) => {
@@ -99,6 +106,7 @@ function App() {
               <Route exact path='/posts/:id'>
                 <PostDetail
                   currentUser={currentUser}
+                  posts={posts}
 
                 />
               </Route>
@@ -117,9 +125,11 @@ function App() {
                 />
               </Route>
 
-              <Route exact path='/user'>
+              <Route exact path='/user/'>
                 <UserProfile
                   currentUser={currentUser}
+                  posts={posts}
+
                 />
               </Route>
 

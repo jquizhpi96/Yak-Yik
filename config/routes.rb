@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
+  
+  post '/auth/login', to: 'authentication#login'
+  get '/auth/verify', to: 'authentication#verify'
+  resources :users, only: [ :create, :show]
+ 
   resources :posts do
     resources :comments
     resources :likes, shallow: true
      end
-  resources :users, only: [ :create, :show]
-  post '/auth/login', to: 'authentication#login'
-  get '/auth/verify', to: 'authentication#verify'
+  
  end
  
   

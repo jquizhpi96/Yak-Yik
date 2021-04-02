@@ -1,16 +1,21 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+
+
+
 
 function Nav(props) {
   const { currentUser, handleLogout } = props;
-  return (
+  
+  
+return (
     <div>
       <header>
         <Link to='/'><h1>Yak Yik</h1></Link>
         {
           currentUser ?
             <>
-              <Link to='/user'>Profile</Link>
+              <Link to={`/user`}>Profile</Link>
               <Link to='/posts'>Post Something?</Link>
               <p>{currentUser.username}</p>
               <button onClick={handleLogout}>Logout</button>
