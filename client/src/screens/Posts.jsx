@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CreatePost from './CreatePost';
 import PostDetail from './PostDetail';
 
 
 function Posts(props) {
-  const { posts, handleDelete, currentUser } = props;
+  const { posts, setPosts, handleDelete, currentUser } = props;
 
   return (
     <div>
-    <h3>Posts</h3>
+       <CreatePost
+          currentUser={currentUser}
+           posts={posts}
+         setPosts={setPosts}/>
+   
+      <h3>Posts</h3>
+     
       {
         posts.map(post => (
           <React.Fragment key={post.id}>

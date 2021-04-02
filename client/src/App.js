@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
-import MainContainer from './containers/MainContainer';
+
 import { getAllPosts } from "./services/posts";
 import { destroyPost, postPost, putPost } from "./services/posts";
-
+import CreatePost from './screens/CreatePost';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import PostDetail from './screens/PostDetail';
@@ -53,6 +53,7 @@ function App() {
     fetchPosts();
   }, []);
 
+
   const handleUpdate = async (id, postData) => {
     const updatedPost = await putPost(id, postData);
     setPosts((prevState) =>
@@ -90,6 +91,7 @@ function App() {
               <Route exact path='/'>
                 < Posts
                   posts={posts}
+                  setPosts={setPosts}
                   currentUser={currentUser}
                   handleDelete={handleDelete}
                 />
@@ -110,6 +112,14 @@ function App() {
               <Route exact path='/user'>
                 <UserProfile
                   currentUser={currentUser}
+                />
+              </Route>
+              <Route exact path="/posts">
+                <CreatePost
+                  currentUser={currentUser}
+                  posts={posts}
+                  setPosts={setPosts}
+
                 />
               </Route>
 
