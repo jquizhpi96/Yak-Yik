@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/auth/verify', to: 'authentication#verify'
   resources :users, only: [ :create, :show]
  
-  resources :posts do
+  resources :posts, shallow: true do
     resources :comments
     resources :likes, shallow: true
      end

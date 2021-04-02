@@ -1,0 +1,65 @@
+import { useState } from "react";
+import { postComment } from "../services/comments";
+import { useHistory } from "react-router-dom";
+
+
+
+
+
+function CreateComment(props) {
+  const history = useHistory()
+
+
+  const [comments, setComments] = useState([]);
+  const [formData, setFormData] = useState({
+    content: "",
+  
+  })
+
+  const { content } = formData
+  const {  postId, currentUser } = props
+
+
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }))
+    
+  }
+    const handleComment = async () => {
+      const newComment = await postComment(postId, {
+        content: content,
+       
+      });
+      setComments((prevState) => [...prevState, newComment])
+      history.go(0)
+    };
+  
+  
+    return (
+      <div>
+        <form onSubmit={handleComment}>
+          <p>Add A Comment</p>
+        <input
+              type="text"
+              name="content"
+              placeholder ="New Comment"
+              value={content}
+              onChange={handleChange}
+            />
+          
+          <button>Submit</button>
+        </form>
+        {/* <EditPost
+          comments={comments}
+          setComments={setComments}
+         
+        /> */}
+      </div>
+    );
+}
+
+  export default CreateComment;

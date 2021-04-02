@@ -2,7 +2,7 @@ import {useState, React} from 'react';
 import { Link } from 'react-router-dom';
 import Modal from '../components/Modal';
 import CreatePost from './CreatePost';
-import PostDetail from './PostDetail';
+
 
 
 function Posts(props) {
@@ -35,19 +35,7 @@ function Posts(props) {
                   
                   <button onClick={() => setShow(post.id)}>delete</button>
                   
-                   {show && (
-                    <Modal posts={posts} handleDelate={handleDelete} show={show} setShow={setShow} toggleModal={toggleModal}>
-                    <p>Are you sure?</p>
-                      <button onClick={() => setShow(false)}>no</button>
-                      <button onClick={() => {
-                        handleDelete(show)
-                        setShow(false)
-                      }}>yes</button>
-                   
-                    </Modal>
-          
                   
-                  )} 
                  
                   
                     
@@ -60,15 +48,24 @@ function Posts(props) {
                 <Link to={`/posts/${post.id}`}>comments</Link>
             </>
             )}
-             {show && (
-                    <Modal posts={posts} handleDelate={handleDelete} show={show} setShow={setShow}toggleModal={toggleModal}/>
-          
-                  
-                  )}
+
+            
           </div>
         ))
       }
-    
+     {show && (
+                    <Modal posts={posts} handleDelate={handleDelete} show={show} setShow={setShow} toggleModal={toggleModal}>
+                    <p>Are you sure?</p>
+                      <button onClick={() => setShow(false)}>no</button>
+                      <button onClick={() => {
+                        handleDelete(show)
+                        setShow(false)
+                      }}>yes</button>
+                   
+                    </Modal>
+          
+                  
+                  )} 
     </div>
   );
 }

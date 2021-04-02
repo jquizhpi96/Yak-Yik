@@ -1,6 +1,7 @@
 
 class LikesController < ApplicationController
   before_action :set_like, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create]
 
   # GET /likes
   def index
@@ -16,7 +17,8 @@ class LikesController < ApplicationController
 
   # POST /likes
   def create
-    @like = Like.new(like_params)
+    @like = Like.new(post_id: params[:post_id])
+    @like.user = @current_user
 
     if @like.save
       render json: @like, status: :created, location: @like

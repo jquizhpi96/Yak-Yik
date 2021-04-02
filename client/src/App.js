@@ -2,8 +2,6 @@ import './App.css';
 import Layout from './layouts/Layout';
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import { getOneUser } from "./services/user";
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 import { getAllPosts } from "./services/posts";
@@ -15,13 +13,12 @@ import PostDetail from './screens/PostDetail';
 import UserProfile from './screens/UserProfile';
 import Posts from './screens/Posts';
 import EditPost from './screens/EditPost';
+import EditComment from './screens/EditComment';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [posts, setPosts] = useState([]);
   const history = useHistory()
-  const [user, setUser] = useState([])
-  const { id } = useParams();
 
 
   useEffect(() => {
@@ -132,6 +129,7 @@ function App() {
 
                 />
               </Route>
+
 
             </>
           )}

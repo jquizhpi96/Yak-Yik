@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { postPost } from "../services/posts";
 import { useHistory } from "react-router-dom";
 
+
 export default function CreatePost(props) {
   const history = useHistory()
 
@@ -10,7 +11,8 @@ export default function CreatePost(props) {
   })
   const { content } = formData;
   
-  const { setPosts } = props
+  const { posts, setPosts } = props
+  
   const handleCreate = async (postData) => {
     const newPost = await postPost(postData);
     setPosts((prevState) => [...prevState, newPost]);
@@ -22,7 +24,7 @@ export default function CreatePost(props) {
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
-      user_id: props.currentUser.id,
+     
     }));
   };
 
@@ -43,6 +45,7 @@ export default function CreatePost(props) {
         />
       </label>
       <button>Post</button>
+      
     </form>
   )
 }

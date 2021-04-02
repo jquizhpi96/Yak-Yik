@@ -1,24 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
-import { getOneUser } from "../services/user";
+
 import { useParams} from 'react-router-dom';
 
 
 
 function UserProfile(props) {
   const [user, setUser] = useState([])
-  const { id } = useParams();
+  const { id, userId} = useParams();
 
   const { currentUser, posts } = props
-    // useEffect(() => {
-  //   const fetchPost = async () => {
-      
-  //     const userData = await getOneUser(id);
-  //     setUser(userData)
-  //   }
-  //   fetchPost()
-  // }, [id])
-  
+ 
+  console.log(currentUser)
+  console.log(posts)
   if (currentUser?.id === posts.user_id) {
 
     posts.map(post => {
@@ -38,8 +32,7 @@ function UserProfile(props) {
     
       
      
-      {console.log(currentUser)}
-      {console.log(posts)}
+     
     </div>
   );
 }
