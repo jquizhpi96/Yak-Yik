@@ -6,6 +6,16 @@ import { useParams} from 'react-router-dom';
 
 
 function UserProfile(props) {
+  
+  // useEffect(() => {
+  //   const fetchPost = async () => {
+      
+  //     const postData = await getOnePost(id);
+  //     setPost(postData)
+  //   }
+  //   fetchPost()
+  // }, [id])
+
   return (
     <div>
       

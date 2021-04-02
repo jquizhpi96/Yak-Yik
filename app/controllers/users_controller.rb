@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
- # GET /posts/1
+ # GET /user /1
   def show 
     @user = User.find(params[:id])
     render json: @user, include: :posts

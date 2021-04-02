@@ -6,7 +6,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 import { getAllPosts } from "./services/posts";
-import { destroyPost, postPost, putPost } from "./services/posts";
+import { destroyPost, putPost } from "./services/posts";
 import CreatePost from './screens/CreatePost';
 import Login from './screens/Login';
 import Register from './screens/Register';
@@ -73,7 +73,7 @@ function App() {
       <Layout
         currentUser={currentUser}
         handleLogout={handleLogout}
-        handleDelete={handleDelete}
+
       >
         <Switch>
           <Route path='/login'>
@@ -109,17 +109,17 @@ function App() {
                 />
               </Route>
 
-              <Route exact path='/user'>
-                <UserProfile
-                  currentUser={currentUser}
-                />
-              </Route>
               <Route exact path="/posts">
                 <CreatePost
                   currentUser={currentUser}
                   posts={posts}
                   setPosts={setPosts}
+                />
+              </Route>
 
+              <Route exact path='/user'>
+                <UserProfile
+                  currentUser={currentUser}
                 />
               </Route>
 

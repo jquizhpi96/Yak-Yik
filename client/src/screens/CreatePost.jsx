@@ -10,7 +10,7 @@ export default function CreatePost(props) {
   })
   const { content } = formData;
   
-  const { posts, setPosts } = props
+  const { setPosts } = props
   const handleCreate = async (postData) => {
     const newPost = await postPost(postData);
     setPosts((prevState) => [...prevState, newPost]);

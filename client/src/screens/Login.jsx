@@ -7,7 +7,7 @@ export default function Login(props) {
     email: '',
     password: ''
   })
-  const { username, email, password } = formData;
+  const { name, email, password } = formData;
   const { handleLogin } = props;
 
   const handleChange = (e) => {
@@ -29,7 +29,7 @@ export default function Login(props) {
         <input
           type='text'
           name='name'
-          value={username}
+          value={name}
           onChange={handleChange}
         />
       </label>
