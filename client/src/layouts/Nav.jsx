@@ -10,7 +10,7 @@ function Nav(props) {
         {
           currentUser ?
             <>
-               <Link to='/post'>Post</Link>
+               <Link to='/user'>Profile</Link>
               <p>{currentUser.username}</p>
               <button onClick={handleLogout}>Logout</button>
             </>

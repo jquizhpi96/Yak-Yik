@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
 
+ # GET /posts/1
+  def show 
+    @user = User.find(params[:id])
+    render json: @user, include: :posts
+  end
+  
   # POST /users
   def create
     @user = User.new(user_params)

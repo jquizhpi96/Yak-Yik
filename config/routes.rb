@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes, shallow: true
      end
-  resources :users, only: :create
+  resources :users, only: [ :create, :show]
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
  end
