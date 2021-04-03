@@ -55,9 +55,6 @@ function App() {
   }, []);
 
 
-
-
-
   const handleUpdate = async (id, postData) => {
     const updatedPost = await putPost(id, postData);
     setPosts((prevState) =>
