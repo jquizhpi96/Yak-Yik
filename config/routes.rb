@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   post '/auth/login', to: 'authentication#login'
   get '/auth/verify', to: 'authentication#verify'
+  # get '/users/:user_id/posts', to: 'posts#user_posts'
+
   resources :users, only: [ :create, :show]
  
   resources :posts, shallow: true do

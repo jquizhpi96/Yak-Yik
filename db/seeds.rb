@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+Like.destroy_all
 Comment.destroy_all
 Post.destroy_all
 User.destroy_all
@@ -28,4 +28,6 @@ puts "#{Post.count} posts created"
 
 puts "#{Comment.count} comments created"
 
+# @like = Like.create!(user_id: @admin.id,  post_id: @post1.id, comment_id: @comment1)
+# puts "#{Like.count} likes created"
 

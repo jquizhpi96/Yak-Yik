@@ -122,7 +122,7 @@ function App() {
                 />
               </Route>
 
-              <Route exact path='/user/'>
+              <Route exact path='/users'>
                 <UserProfile
                   currentUser={currentUser}
                   posts={posts}
