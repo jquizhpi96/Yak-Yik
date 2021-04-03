@@ -1,7 +1,8 @@
 
 class LikesController < ApplicationController
+  before_action :authorize_request, only: [ :create, :update, :destroy ]
   before_action :set_like, only: [:show, :update, :destroy]
-  before_action :authorize_request, only: [:create]
+  
 
   # GET /likes
   def index
