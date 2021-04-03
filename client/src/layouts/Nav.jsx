@@ -15,7 +15,7 @@ return (
         {
           currentUser ?
             <>
-              <Link to={`/users`}>Profile</Link>
+              <Link to='/users'>Profile</Link>
               <Link to='/posts'>Post Something?</Link>
               <p>{currentUser.username}</p>
               <button onClick={handleLogout}>Logout</button>

@@ -14,13 +14,13 @@ function UserProfile(props) {
   console.log(currentUser)
   console.log(posts)
 
-  useEffect(() => {
-    const fetchPosts = async (currentUser_id) => {
-      const postData = await getUserPost(currentUser.id);
-      setUser(postData);
-    };
-    fetchPosts();
-  }, []);
+  // useEffect(() => {
+  //   const fetchPosts = async (currentUser_id) => {
+  //     const postData = await getUserPost(currentUser.id);
+  //     setUser(postData);
+  //   };
+  //   fetchPosts();
+  // }, []);
 
   if (currentUser?.id === posts.user_id) {
 
