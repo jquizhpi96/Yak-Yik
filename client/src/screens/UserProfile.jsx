@@ -11,7 +11,7 @@ function UserProfile(props) {
 
   const { currentUser, posts } = props
  
-  console.log(currentUser)
+  console.log(currentUser.name.length)
   console.log(posts)
 
   // useEffect(() => {
@@ -34,7 +34,7 @@ function UserProfile(props) {
 
   return (
     <div>
-      <h3>{currentUser.name}</h3>
+      <h3> Hi {currentUser.name.slice(0,2)} ... i mean user!</h3>
       {currentUser &&
         posts.filter((post) => {
           
