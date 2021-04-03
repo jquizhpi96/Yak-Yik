@@ -34,9 +34,6 @@ function UserProfile(props) {
 
   return (
     <div>
-      
-      {/* <h3>{currentUser.name}</h3>
-      <p>{posts.content}</p> */}
       <h3>{currentUser.name}</h3>
       {currentUser &&
         posts.filter((post) => {
@@ -44,7 +41,7 @@ function UserProfile(props) {
           return post.user_id === currentUser.id
         })
           .map((post) => (
-        <div>
+            <div key= {post.id}>
          
           <p>{post.content} </p>
         </div>
