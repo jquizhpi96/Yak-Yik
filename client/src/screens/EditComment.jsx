@@ -52,6 +52,7 @@ function EditComment(props) {
           type='text'
           name='content'
           value={content}
+          required
           onChange={handleChange}
         />
       </label>

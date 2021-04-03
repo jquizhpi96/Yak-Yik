@@ -17,7 +17,7 @@ function CreateComment(props) {
   })
 
   const { content } = formData
-  const {  postId, currentUser } = props
+  const {  postId, currentUser, posts } = props
 
 
   
@@ -35,7 +35,7 @@ function CreateComment(props) {
        
       });
       setComments((prevState) => [...prevState, newComment])
-      history.go(0)
+      history.push(`/posts/${posts.id}`)
     };
   
   
@@ -47,17 +47,14 @@ function CreateComment(props) {
               type="text"
               name="content"
               placeholder ="New Comment"
-              value={content}
+            value={content}
+            required
               onChange={handleChange}
             />
           
           <button>Submit</button>
         </form>
-        {/* <EditPost
-          comments={comments}
-          setComments={setComments}
-         
-        /> */}
+       
       </div>
     );
 }

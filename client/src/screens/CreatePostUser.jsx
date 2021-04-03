@@ -3,7 +3,7 @@ import { postPost } from "../services/posts";
 import { useHistory } from "react-router-dom";
 
 
-export default function CreatePost(props) {
+export default function CreatePostUser(props) {
   const history = useHistory()
   const [toggle, setToggle] = useState(false)
 
@@ -18,7 +18,7 @@ export default function CreatePost(props) {
     const newPost = await postPost(postData);
     setPosts((prevState) => [...prevState, newPost]);
     setToggle((curr) => !curr)
-    history.push("/");
+    history.push("/users");
   };
 
   const handleChange = (e) => {

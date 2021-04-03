@@ -1,5 +1,6 @@
 import {useState, React} from 'react';
 import { Link } from 'react-router-dom';
+import Likes from '../components/Likes';
 import Modal from '../components/Modal';
 import CreatePost from './CreatePost';
 
@@ -29,10 +30,11 @@ function Posts(props) {
            {
               currentUser?.id === post.user_id && (
                 <div key={post.id}>
-                <Link to={`/posts/${post.id}/edit`}><button>Edit</button></Link>
-                <button>Like</button>
-                  <Link to={`/posts/${post.id}`}>comments</Link>
                   
+                  <button>Like</button>
+                  <Link to={`/posts/${post.id}`}>comments</Link>
+                  <Link to={`/posts/${post.id}/edit`}><button>Edit</button></Link>
+
                   <button onClick={() => setShow(post.id)}>delete</button>
                   
                   
@@ -44,7 +46,11 @@ function Posts(props) {
               )}
             {currentUser?.id !== post.user_id && (
             <>
-                <button>Like</button>
+                {/* <Likes
+                  allLikes={post.likes}
+                  posts = {posts}
+                
+                /> */}
                 <Link to={`/posts/${post.id}`}>comments</Link>
             </>
             )}
@@ -65,7 +71,9 @@ function Posts(props) {
                     </Modal>
           
                   
-                  )} 
+      )}
+      
+      
     </div>
   );
 }

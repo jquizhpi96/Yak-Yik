@@ -13,7 +13,7 @@ import PostDetail from './screens/PostDetail';
 import UserProfile from './screens/UserProfile';
 import Posts from './screens/Posts';
 import EditPost from './screens/EditPost';
-import EditComment from './screens/EditComment';
+import EditPostUser from './screens/EditPostUser';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -123,10 +123,18 @@ function App() {
                 <UserProfile
                   currentUser={currentUser}
                   posts={posts}
+                  setPosts={setPosts}
+                  handleDelete={handleDelete}
 
                 />
               </Route>
+              <Route exact path='/users/:id/posts/:id/edit'>
+                <EditPostUser
+                  currentUser={currentUser}
+                  posts={posts}
 
+                />
+              </Route>
 
             </>
           )}

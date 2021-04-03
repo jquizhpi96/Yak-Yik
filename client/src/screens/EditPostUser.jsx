@@ -1,16 +1,20 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
+
+import { destroyPost, putPost } from "../services/posts";
 
 
-function EditPost(props) {
-  {
+function EditPostUser(props) {
+  const [userPosts, setUserPosts] = useState([])
+  
     const [formData, setFormData] = useState({
       content: ''
     })
     const { content } = formData;
     const { id } = useParams();
-    const { posts, handleUpdate } = props;
-  
+    const { posts} = props;
+  const history = useHistory()
  
     useEffect(() => {
       const prefillFormData = () => {
@@ -25,6 +29,17 @@ function EditPost(props) {
       }
     }, [posts, id])
 
+    const handleUpdate = async (id, postData) => {
+      const updatedPost = await putPost(id, postData);
+      setUserPosts((prevState) =>
+        prevState.map((post) => {
+          return post.id === Number(id) ? updatedPost : post;
+        })
+      );
+    
+      history.push("/users");
+      history.go(0);
+    };
 
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -33,6 +48,7 @@ function EditPost(props) {
         [name]: value,
       }))
     }
+  
 
     return (
    
@@ -55,6 +71,6 @@ function EditPost(props) {
       </form>
       
     )
-  }
+  
 }
-  export default EditPost;
+  export default EditPostUser;

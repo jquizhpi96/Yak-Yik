@@ -4,8 +4,6 @@ import { getOnePost } from '../services/posts'
 import { getAllComments} from '../services/comments'
 import { destroyComment} from '../services/comments'
 import CreateComment from './CreateComment';
-import Posts from './Posts';
-import { Link } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
 
@@ -34,7 +32,7 @@ function PostDetail(props) {
     
     
     fetchPost()
-  }, [])
+  }, [id])
   
   useEffect(() => {
     const fetchComments = async () => {

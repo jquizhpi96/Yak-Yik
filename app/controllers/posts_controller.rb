@@ -12,15 +12,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   def show
     @post = Post.find(params[:id])
-    render json: @post, include: :comments
+    render json: @post, include: [:comments, :likes] 
   end
-  
-#   def user_posts
-#     @user =  User.find(params[:user_id])
-#     @posts = Post.where(user_id: @user.id)
-#     # @post.user = @user
-#     render json: @posts, include: :comments
-# end
   
    # POST /posts
   def create
