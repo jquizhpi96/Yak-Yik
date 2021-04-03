@@ -34,7 +34,7 @@ function UserProfile(props) {
 
   return (
     <div>
-      <h3> Hi {currentUser.name.slice(0,2)} ... i mean user!</h3>
+      <h3> Hello {currentUser.name.slice(0,2)} .... I mean User!</h3>
       {currentUser &&
         posts.filter((post) => {
           
