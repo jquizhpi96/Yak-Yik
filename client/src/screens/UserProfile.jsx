@@ -40,7 +40,7 @@ function UserProfile(props) {
             <div key= {post.id}>
          
               <p>{post.content} </p>
-              <Link to={`/posts/${post.id}`}>comments</Link>
+              <Link to={`/posts/${post.id}`}>comments({post.comments.length})</Link>
                   <Link to={`/users/${currentUser.id}/posts/${post.id}/edit`}><button>Edit</button></Link>
 
                   <button onClick={() => setShow(post.id)}>delete</button>

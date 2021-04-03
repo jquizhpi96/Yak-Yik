@@ -3,7 +3,6 @@ import Layout from './layouts/Layout';
 import { useState, useEffect } from 'react';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
-
 import { getAllPosts } from "./services/posts";
 import { destroyPost, putPost } from "./services/posts";
 import CreatePost from './screens/CreatePost';
@@ -107,6 +106,7 @@ function App() {
               <Route exact path='/posts/:id/edit'>
                 <EditPost
                   posts={posts}
+                  currentUser={currentUser}
                   handleUpdate={handleUpdate}
                 />
               </Route>

@@ -4,6 +4,7 @@ export const getAllComments = async (postId) => {
   const resp = await api.get(`/posts/${postId}/comments`);
   return resp.data;
 };
+//change name above soon 
 
 export const getOneComment = async (postId, id) => {
   const resp = await api.get(`/posts/${postId}/comments/${id}`);

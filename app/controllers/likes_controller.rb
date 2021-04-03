@@ -6,9 +6,8 @@ class LikesController < ApplicationController
 
   # GET /likes
   def index
-    @likes = Like.all
-
-    render json: @likes
+    @post = Post.find(params[:post_id])
+  render json: @post.likes
   end
 
   # GET /likes/1
@@ -18,6 +17,8 @@ class LikesController < ApplicationController
 
   # POST /likes
   def create
+    @post = Post.find(params[:post_id])
+    @comment = Comment.where(post_id: @post.id)
     @like = Like.new(post_id: params[:post_id])
     @like.user = @current_user
 
