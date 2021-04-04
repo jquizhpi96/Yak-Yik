@@ -19,6 +19,7 @@ export default function CreatePost(props) {
     setPosts((prevState) => [...prevState, newPost]);
     setToggle((curr) => !curr)
     history.push("/");
+    
   };
 
   const handleChange = (e) => {
@@ -28,6 +29,7 @@ export default function CreatePost(props) {
       [name]: value,
      
     }));
+   
   };
 
   return (

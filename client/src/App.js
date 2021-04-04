@@ -9,7 +9,7 @@ import CreatePost from './screens/CreatePost/CreatePost';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import PostDetail from './screens/PostDetail';
-import UserProfile from './screens/UserProfile';
+import UserProfile from './screens/UserProfile/UserProfile';
 import Posts from './screens/Posts/Posts';
 import EditPost from './screens/EditPost';
 import EditPostUser from './screens/EditPostUser';

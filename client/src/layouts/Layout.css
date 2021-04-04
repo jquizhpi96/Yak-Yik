@@ -1,28 +1,41 @@
 .layout {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: 0.5fr, 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
+  grid-template-areas:
+    "h h h "
+    "b b b";
 }
+
 header {
   display: flex;
+  grid-area: h;
 }
 h1.header,
 .yak {
   margin-left: 30px;
   position: fixed;
+  grid-area: h;
+  color: rgb(100, 100, 100);
 }
 
 .yak {
   height: 50px;
   left: 110px;
-  top: 15px;
+  top: 30px;
 }
-
+/* .navbar {
+  grid-area: n;
+} */
 .children {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 60px;
+  margin: 0 auto;
+  margin-top: 70px;
+  grid-area: b;
 
   /* position: relative; */
-  top: auto;
 }

@@ -18,6 +18,7 @@ export default function CreatePostUser(props) {
     setPosts((prevState) => [...prevState, newPost]);
     setToggle((curr) => !curr);
     history.push("/users");
+    
   };
 
   const handleChange = (e) => {

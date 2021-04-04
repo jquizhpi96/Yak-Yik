@@ -1,6 +1,13 @@
 .post-button {
   position: relative;
   /* display: flex; */
-  right: 60px;
+  right: 65px;
   bottom: 20px;
+  background-color: #7cfcd0;
+  border-style: none;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-style: solid;
+  border: 1px solid #9c9c9c;
 }

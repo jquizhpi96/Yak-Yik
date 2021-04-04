@@ -1,22 +1,13 @@
 .App {
   background-color: #7cfcd0;
+  /* height: 100vh; */
 
-  /* display: grid;
-  width: 100%;
-  height: 250px;
+  /* display: grid; */
+
+  /* grid-template-columns: 0.5fr, 1fr, 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
   grid-template-areas:
-    " nav head"
-    "nav  main"
-    "nav  main";
-  grid-template-rows: 50px 1fr 30px;
-  grid-template-columns: 150px 1fr;
-} */
-}
-.layout {
-  grid-area: nav;
-}
-.body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+    "h h h "
+    "b b b"; */
+  color: rgb(100, 100, 100);
 }
