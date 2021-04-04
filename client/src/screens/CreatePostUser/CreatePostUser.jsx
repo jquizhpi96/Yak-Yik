@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { postPost } from "../services/posts";
+import { postPost } from "../../services/posts";
 import { useHistory } from "react-router-dom";
-
+import "./CreatePostUser.css"
 export default function CreatePostUser(props) {
   const history = useHistory();
   const [toggle, setToggle] = useState(false);
@@ -16,7 +16,9 @@ export default function CreatePostUser(props) {
   const handleCreate = async (postData) => {
     const newPost = await postPost(postData);
     setPosts((prevState) => [...prevState, newPost]);
+    
     setToggle((curr) => !curr);
+    
     history.push("/users");
     
   };
@@ -46,7 +48,7 @@ export default function CreatePostUser(props) {
           onChange={handleChange}
         />
       </label>
-      <button>Post</button>
+      <button className= 'post-button'>Post</button>
     </form>
   );
 }

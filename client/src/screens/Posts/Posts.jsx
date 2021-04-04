@@ -28,15 +28,13 @@ const [postId, setPostId] = useState('')
     <div className="body">
       <CreatePost className="createPost" currentUser={currentUser} posts={posts} setPosts={setPosts} />
 
-      <br/>
+      <br />
+      <div className="index">
       {posts.slice(0).reverse().map((post) => (
         <div key={post.id}>
           <div className="lol">
           <div className="post">{post.content}</div>
-          {/* <Link to={`/posts/${post.id}`}>
-                comments( {post.comments.length})
-              </Link> */}
-            
+    
           
           {currentUser?.id === post.user_id && (
             <div className="userContainer" key={post.id}>
@@ -69,6 +67,7 @@ const [postId, setPostId] = useState('')
             </div>
         </div>
       ))}
+       </div>
       {show && (
         <Modal
           posts={posts}
@@ -79,6 +78,7 @@ const [postId, setPostId] = useState('')
           toggleModal={toggleModal}
         >
           <p>Are you sure?</p>
+          <br/>
           <button onClick={() => setShow(false)}>no</button>
           <button
             onClick={() => {

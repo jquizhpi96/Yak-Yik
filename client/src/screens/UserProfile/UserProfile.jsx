@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Modal from "../../components/Modal";
-import CreatePostUser from "../CreatePostUser";
+import CreatePostUser from "../CreatePostUser/CreatePostUser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments} from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
@@ -41,7 +41,7 @@ function UserProfile(props) {
           .filter((post) => {
             return post.user_id === currentUser.id;
           })
-         .reverse().map((post) => (
+         .slice(0).reverse().map((post) => (
             <div className = "lol" key={post.id}>
               <p className="post">{post.content} </p>
              <div className="userContainer">

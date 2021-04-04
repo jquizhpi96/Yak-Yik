@@ -17,7 +17,9 @@ export default function CreatePost(props) {
   const handleCreate = async (postData) => {
     const newPost = await postPost(postData);
     setPosts((prevState) => [...prevState, newPost]);
-    setToggle((curr) => !curr)
+    setFormData({ content: "" })
+    setToggle((curr) => !curr);
+
     history.push("/");
     
   };
@@ -33,6 +35,7 @@ export default function CreatePost(props) {
   };
 
   return (
+    <div className= "post-form">
     <form onSubmit={(e) => {
       e.preventDefault();
       handleCreate(formData);
@@ -51,6 +54,7 @@ export default function CreatePost(props) {
       </label>
       <button className= "post-button">Post</button>
       
-    </form>
+      </form>
+      </div>
   )
 }

@@ -1,28 +1,17 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
-import CreatePost from "./CreatePost";
-import { getAllComments } from "../services/comments";
-
+import CreatePost from "./CreatePost/CreatePost";
+import './Post.css'
 
 function Post(props) {
-  const [postItems, setPostItems] = useState([])
-   const {posts} = props
-  
-  useEffect(() => {
-    const fetchComments = async (posts_id) => {
-      const commentData = await getAllComments(posts_id);
-      setPostItems(commentData);
-    };
-    fetchComments();
-  }, []);
-
-  
-  return (
-    
-    <div>
-      
-    </div>
-  );
+  const { currentUser, posts, setPosts } = props
+  return(
+  <div className="createForm">
+    < CreatePost
+    currentUser={currentUser}
+    posts={posts}
+    setPosts={setPosts}/>
+ </div>
+  )
 }
-
 export default Post;

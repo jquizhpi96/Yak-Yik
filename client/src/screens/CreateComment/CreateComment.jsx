@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { postComment } from "../services/comments";
+import { postComment } from "../../services/comments";
 import { useHistory } from "react-router-dom";
+import './CreateComment.css'
 
 function CreateComment(props) {
   const history = useHistory();
@@ -29,10 +30,9 @@ function CreateComment(props) {
   };
 
   return (
-    <div>
+    
       <form onSubmit={handleComment}>
-        <p>Add A Comment</p>
-        <input
+        <input className = "create-comment"
           type="text"
           name="content"
           placeholder="New Comment"
@@ -43,7 +43,7 @@ function CreateComment(props) {
 
         <button>Submit</button>
       </form>
-    </div>
+    
   );
 }
 

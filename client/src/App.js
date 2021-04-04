@@ -5,14 +5,15 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import { getAllPosts } from "./services/posts";
 import { destroyPost, putPost } from "./services/posts";
-import CreatePost from './screens/CreatePost/CreatePost';
+// import CreatePost from './screens/CreatePost/CreatePost';
 import Login from './screens/Login';
 import Register from './screens/Register';
-import PostDetail from './screens/PostDetail';
+import PostDetail from './screens/PostDetail/PostDetail';
 import UserProfile from './screens/UserProfile/UserProfile';
 import Posts from './screens/Posts/Posts';
 import EditPost from './screens/EditPost';
 import EditPostUser from './screens/EditPostUser';
+import Post from './screens/Post';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -115,7 +116,7 @@ function App() {
               </Route>
 
               <Route exact path="/posts">
-                <CreatePost
+                < Post
                   currentUser={currentUser}
                   posts={posts}
                   setPosts={setPosts}
