@@ -1,0 +1,6 @@
+.post-button {
+  position: relative;
+  /* display: flex; */
+  right: 60px;
+  bottom: 20px;
+}

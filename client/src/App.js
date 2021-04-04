@@ -5,12 +5,12 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import { getAllPosts } from "./services/posts";
 import { destroyPost, putPost } from "./services/posts";
-import CreatePost from './screens/CreatePost';
+import CreatePost from './screens/CreatePost/CreatePost';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import PostDetail from './screens/PostDetail';
 import UserProfile from './screens/UserProfile';
-import Posts from './screens/Posts';
+import Posts from './screens/Posts/Posts';
 import EditPost from './screens/EditPost';
 import EditPostUser from './screens/EditPostUser';
 
@@ -70,12 +70,14 @@ function App() {
 
   return (
     <div className="App">
+      {/* <h1>Yak Yik</h1> */}
       <Layout
         currentUser={currentUser}
         handleLogout={handleLogout}
 
       >
-        <Switch>
+
+        <Switch >
           <Route path='/login'>
             <Login
               handleLogin={handleLogin}
@@ -94,6 +96,7 @@ function App() {
                   setPosts={setPosts}
                   currentUser={currentUser}
                   handleDelete={handleDelete}
+                  postId={posts.Id}
                 />
               </Route>
               <Route exact path='/posts/:id'>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { postPost } from "../services/posts";
+import { postPost } from "../../services/posts";
 import { useHistory } from "react-router-dom";
-
+import "./CreatePost.css"
 
 export default function CreatePost(props) {
   const history = useHistory()
@@ -47,7 +47,7 @@ export default function CreatePost(props) {
           onChange={handleChange}
         />
       </label>
-      <button>Post</button>
+      <button className= "post-button">Post</button>
       
     </form>
   )

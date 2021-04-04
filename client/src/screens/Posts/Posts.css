@@ -1,0 +1,51 @@
+.posts {
+  color: #333333;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.post {
+  /* background-color: white; */
+  color: #1f1f1f;
+  padding: 20px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+textarea {
+  margin-left: 20px;
+  min-width: 50vw;
+  max-width: 50vw;
+  min-height: 5vh;
+  max-height: 5vh;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  padding: 50px;
+}
+
+div.lol {
+  border-style: curve;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #9c9c9c;
+}

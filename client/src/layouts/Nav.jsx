@@ -1,7 +1,7 @@
 import {React} from 'react';
 import { Link } from 'react-router-dom';
 
-
+import './Nav.css'
 
 
 function Nav(props) {
@@ -9,22 +9,24 @@ function Nav(props) {
   
   
 return (
-    <div>
-      <header>
-        <Link to='/'><h1>Yak Yik</h1></Link>
+    <div className="nav">
+      
         {
           currentUser ?
-            <>
-              <Link to='/users'>Profile</Link>
-              <Link to='/posts'>Post Something?</Link>
-              <p>{currentUser.username}</p>
-              <button onClick={handleLogout}>Logout</button>
-            </>
+        <ul className="list">
+          <li>Welcome {currentUser.name}</li>
+          <br/>
+          <li><Link to='/users'>Profile</Link></li>
+          <br/>
+           <li><Link to='/posts'>Post Something?</Link></li>
+          <br/>
+             <li> <button onClick={handleLogout}>Logout</button></li>
+            </ul>
             :
             <Link to='/login'>Login/Register</Link>
             
         }
-      </header>
+      
     
     </div>
   )

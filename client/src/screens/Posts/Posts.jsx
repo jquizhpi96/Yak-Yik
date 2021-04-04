@@ -1,56 +1,63 @@
-import { useState, useEffect, React } from "react";
+import { useState, React } from "react";
 import { Link } from "react-router-dom";
-import Likes from "../components/Likes";
-import Modal from "../components/Modal";
-import CreatePost from "./CreatePost";
-import { getAllComments } from "../services/comments";
-import { useParams } from "react-router-dom";
+import Likes from "../../components/Likes";
+import Modal from "../../components/Modal";
+import CreatePost from "../CreatePost/CreatePost";
+import "./Posts.css"
 
 function Posts(props) {
   const [comments, setComments] = useState([]);
   const { posts, setPosts, handleDelete, currentUser } = props;
   const [show, setShow] = useState(false);
-
+const [postId, setPostId] = useState('')
   const toggleModal = () => {
     setShow(!show);
   };
 
  
   return (
-    <div>
-      <CreatePost currentUser={currentUser} posts={posts} setPosts={setPosts} />
+  
+    <div className="body">
+      <CreatePost className="createPost" currentUser={currentUser} posts={posts} setPosts={setPosts} />
 
-      <h3>Posts</h3>
+      <h2 className = "posts">Posts</h2>
 
       {posts.map((post) => (
         <div key={post.id}>
-          <h3>{post.content}</h3>
-          <Link to={`/posts/${post.id}`}>
+          <div className="lol">
+          <div className="post">{post.content}</div>
+          {/* <Link to={`/posts/${post.id}`}>
                 comments( {post.comments.length})
-              </Link>
+              </Link> */}
             
           
           {currentUser?.id === post.user_id && (
-            <div key={post.id}>
+            <div className="userContainer" key={post.id}>
               {/* <button>Like</button> */}
+              
+              <Likes allLikes={post.likes} posts={posts} postId={post.id} />
+              <Link to={`/posts/${post.id}`}>
+                comments( {post.comments.length})
+              </Link>
               <Link to={`/posts/${post.id}/edit`}>
                 <button>Edit</button>
               </Link>
-              <Likes allLikes={post.likes} posts={posts} postId={post.id} />
-
-              <button onClick={() => setShow(post.id)}>delete</button>
+              <button onClick={() => {
+                setShow(curr => !curr)
+                setPostId(post.id)
+              }}>delete</button>
             </div>
           )}
           {currentUser?.id !== post.user_id && (
-            <>
-              <Likes allLikes={post.likes} posts={posts} postId={post.id} />
-              {/* <button>Like</button> */}
-{/* 
+            <div className = 'userContainer'>
+              < Likes allLikes={post.likes} posts={posts} postId={post.id} />
               <Link to={`/posts/${post.id}`}>
                 comments( {post.comments.length})
-              </Link> */}
-            </>
-          )}
+              </Link>
+              
+            </div>
+            )}
+            </div>
         </div>
       ))}
       {show && (
@@ -58,6 +65,7 @@ function Posts(props) {
           posts={posts}
           handleDelate={handleDelete}
           show={show}
+          postsId={posts.id}
           setShow={setShow}
           toggleModal={toggleModal}
         >
@@ -65,7 +73,7 @@ function Posts(props) {
           <button onClick={() => setShow(false)}>no</button>
           <button
             onClick={() => {
-              handleDelete(show);
+              handleDelete(postId);
               setShow(false);
             }}
           >

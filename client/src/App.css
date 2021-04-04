@@ -1,3 +1,22 @@
 .App {
-  text-align: center;
+  background-color: #7cfcd0;
+
+  /* display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas:
+    " nav head"
+    "nav  main"
+    "nav  main";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 150px 1fr;
+} */
+}
+.layout {
+  grid-area: nav;
+}
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
