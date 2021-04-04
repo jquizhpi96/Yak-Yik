@@ -79,8 +79,8 @@ const [postId, setPostId] = useState('')
         >
           <p>Are you sure?</p>
           <br/>
-          <button onClick={() => setShow(false)}>no</button>
-          <button
+          <button className="no"onClick={() => setShow(false)}>no</button>
+          <button className="yes"
             onClick={() => {
               handleDelete(postId);
               setShow(false);

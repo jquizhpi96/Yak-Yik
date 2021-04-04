@@ -20,12 +20,13 @@ h1.header,
   position: fixed;
   grid-area: h;
   color: rgb(100, 100, 100);
+  font-size: 40px;
 }
 
 .yak {
-  height: 50px;
-  left: 110px;
-  top: 30px;
+  height: 60px;
+  left: 140px;
+  top: 35px;
 }
 /* .navbar {
   grid-area: n;
