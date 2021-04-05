@@ -27,10 +27,10 @@ return (
           
       
       <li><Link to='/posts'>{home}</Link></li>
-      <li><Link to='/users'>{user}</Link></li>
+      
          
       <li><Link to='/post/new'>{note}</Link></li>
-       
+      <li><Link to='/users'>{user}</Link></li>
       <li> <button className="logout" onClick={handleLogout}>{signOut}</button></li>
          
             </ul>
