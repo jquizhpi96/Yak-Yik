@@ -97,13 +97,13 @@ a {
   }
   textarea {
     margin-top: 90px;
-    min-width: 75vw;
-    max-width: 75vw;
+    min-width: 80vw;
+
     margin-left: 0;
     padding: 30px;
   }
   div.lol {
-    width: 89vw;
+    width: 95vw;
     margin-left: 0;
     margin-bottom: 20px;
   }
@@ -116,6 +116,6 @@ a {
     width: 50vw;
   }
   .userContainer {
-    /* margin-bottom: 100px; */
+    padding-top: 10px;
   }
 }

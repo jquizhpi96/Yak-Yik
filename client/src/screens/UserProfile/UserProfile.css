@@ -39,4 +39,7 @@ hr {
     margin-bottom: 5px;
     margin-left: 20px;
   }
+  .user-container {
+    padding-top: 0px;
+  }
 }
