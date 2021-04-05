@@ -100,8 +100,9 @@ a {
     margin-bottom: 100px;
   }
   textarea {
+    margin: 0px;
     margin-top: 90px;
-    min-width: 80vw;
+    min-width: 10vw;
 
     margin-left: 0px;
     padding: 30px;

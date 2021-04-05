@@ -47,7 +47,7 @@ function PostDetail(props) {
   return (
     <div className="post-detail">
       <div className="post-content">{post.content}</div>
-      <p>{post.comments.length} comment</p>
+      <p>{post.comments.length} comments</p>
       <div className= "comment-container">
       {post.comments.map((comment) => (
         <React.Fragment key={comment.id}>
