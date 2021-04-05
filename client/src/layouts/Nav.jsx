@@ -5,7 +5,7 @@ import './Nav.css'
 
 
 function Nav(props) {
-  const { currentUser, handleLogout } = props;
+  const {  handleLogout } = props;
   
   // let newName = currentUser.name.split(' ').map((name) => name.charAt(0).toUpperCase() + name.slice(1)).join(' ')
   

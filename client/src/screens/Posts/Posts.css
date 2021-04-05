@@ -59,6 +59,10 @@ textarea {
   overflow: auto;
   padding: 50px;
 }
+.editIcon,
+.trashIcon {
+  color: rgb(94, 94, 94);
+}
 
 div.lol {
   border-style: curve;

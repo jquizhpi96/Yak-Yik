@@ -1,7 +1,6 @@
 .App {
   background-color: #7cfcd0;
   height: 100%;
-  overflow: hidden;
-
+  font-family: "Nunito", sans-serif;
   color: rgb(100, 100, 100);
 }

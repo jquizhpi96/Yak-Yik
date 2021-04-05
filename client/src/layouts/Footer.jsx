@@ -1,33 +1,40 @@
 import {React} from 'react';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Footer.css'
+import { faHome} from '@fortawesome/free-solid-svg-icons'
+import { faUser} from '@fortawesome/free-solid-svg-icons'
+import { faStickyNote } from '@fortawesome/free-solid-svg-icons'
+import { faSignOutAlt} from '@fortawesome/free-solid-svg-icons'
+
 
 
 function Footer(props) {
-  const { currentUser, handleLogout } = props;
+  const { handleLogout } = props;
+
   
-  // let newName = currentUser.name.split(' ').map((name) => name.charAt(0).toUpperCase() + name.slice(1)).join(' ')
-  
+ 
+  const home = <FontAwesomeIcon className="footer-icon" icon={faHome} size="2x" />
+  const user = <FontAwesomeIcon className= "footer-icon" icon={faUser} size="2x"/>
+  const  note= <FontAwesomeIcon className= "footer-icon" icon={faStickyNote} size="2x"/>
+  const  signOut= <FontAwesomeIcon className= "footer-icon" icon={faSignOutAlt} size="2x"/>
+
 return (
     <div className="footer">
       
-
+  
         <ul className="footer-list">
-          {/* {currentUser && (
-            <li>Welcome { currentUser.name.charAt(0).toUpperCase()}</li>
-          )} */}
-          <br/>
-          <li><Link to='/users'>Profile</Link></li>
-          <br/>
-           <li><Link to='/post/new'>Post Something?</Link></li>
-          <br/>
-             <li> <button className ="logout" onClick={handleLogout}>Logout</button></li>
+          
+      
+      <li><Link to='/posts'>{home}</Link></li>
+      <li><Link to='/users'>{user}</Link></li>
+         
+      <li><Link to='/post/new'>{note}</Link></li>
+       
+      <li> <button className="logout" onClick={handleLogout}>{signOut}</button></li>
          
             </ul>
-            {/* :
-            <Link to='/'>Login/Register</Link> */}
-            
+           
         
       
     

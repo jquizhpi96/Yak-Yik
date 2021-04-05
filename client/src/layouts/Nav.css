@@ -43,21 +43,4 @@ a {
   .nav {
     display: none;
   }
-  /* ul {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: inline-block;
-    width: 100vw;
-    padding: 0;
-  }
-  .list {
-    padding: 0;
-    display: inline-block;
-    display: inline;
-  }
-  li {
-    display: inline;
-  }
-} */
 }

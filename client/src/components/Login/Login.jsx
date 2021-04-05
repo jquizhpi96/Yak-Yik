@@ -7,11 +7,11 @@ export default function Login(props) {
     name: '',
     email: '',
     password: '',
-    // isError: false,
+   
    
   })
   const { name, email, password } = formData;
-  const { handleLogin, currentUser } = props;
+  const { handleLogin } = props;
 
 
   const handleChange = (e) => {
