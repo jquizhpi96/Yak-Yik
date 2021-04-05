@@ -124,4 +124,14 @@ a {
     padding-top: 20px;
     width: 90vw;
   }
+  .post-button {
+    padding: 10px;
+    top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
+    background-color: hotpink;
+    border-radius: 10px;
+    font-weight: bold;
+  }
 }

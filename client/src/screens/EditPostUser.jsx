@@ -52,16 +52,16 @@ function EditPostUser(props) {
   
 
     return (
-   
+   <div className = "edit-container">
       <form onSubmit={(e) => {
         e.preventDefault();
         handleUpdate(id, formData);
       }}>
-        <h3>Edit Post</h3>
-        <div className="post-content2">
+        <h3 className="edit-title">Edit Post</h3>
+        <div >
         <label >
           Post:
-        <input
+        <input className="post-content2"
             type='text'
             name='content'
             value={content}
@@ -70,9 +70,9 @@ function EditPostUser(props) {
           />
         </label>
         </div>
-        <button>Submit</button>
+        <button className= "edit-button">Submit</button>
       </form>
-      
+      </div>
     )
   
 }
