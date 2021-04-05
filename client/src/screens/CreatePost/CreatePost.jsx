@@ -20,7 +20,7 @@ export default function CreatePost(props) {
     setFormData({ content: "" })
     setToggle((curr) => !curr);
 
-    history.push("/");
+    history.push("/posts");
     
   };
 

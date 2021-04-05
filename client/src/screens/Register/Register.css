@@ -1,0 +1,28 @@
+.register-container {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form {
+  padding: 1em;
+  width: 50%;
+  height: 70%;
+  margin: 0px auto;
+  border: 2px solid #bcb8b1;
+  border-radius: 6px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin-bottom: 100px;
+}
+
+.pic2 {
+  height: 200px;
+  width: 200px;
+  padding: 10px;
+  align-self: center;
+}
+.register {
+  text-align: center;
+  font-size: 30px;
+}

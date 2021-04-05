@@ -18,12 +18,12 @@ return (
           <br/>
           <li><Link to='/users'>Profile</Link></li>
           <br/>
-           <li><Link to='/posts'>Post Something?</Link></li>
+           <li><Link to='/posts/new'>Post Something?</Link></li>
           <br/>
              <li> <button className ="logout" onClick={handleLogout}>Logout</button></li>
             </ul>
             :
-            <Link to='/login'>Login/Register</Link>
+            <Link to='/'>Login/Register</Link>
             
         }
       

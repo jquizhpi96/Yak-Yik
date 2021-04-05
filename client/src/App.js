@@ -6,14 +6,15 @@ import { loginUser, registerUser, removeToken, verifyUser } from './services/aut
 import { getAllPosts } from "./services/posts";
 import { destroyPost, putPost } from "./services/posts";
 // import CreatePost from './screens/CreatePost/CreatePost';
-import Login from './screens/Login';
-import Register from './screens/Register';
+import Login from './components/Login/Login';
+import Register from './screens/Register/Register';
 import PostDetail from './screens/PostDetail/PostDetail';
 import UserProfile from './screens/UserProfile/UserProfile';
 import Posts from './screens/Posts/Posts';
 import EditPost from './screens/EditPost';
 import EditPostUser from './screens/EditPostUser';
 import Post from './screens/Post';
+import Home from './screens/Home/Home';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -32,19 +33,20 @@ function App() {
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/posts');
   }
 
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/posts');
   }
 
   const handleLogout = () => {
     setCurrentUser(null);
     localStorage.removeItem('authToken');
     removeToken();
+    history.push('/')
   }
   useEffect(() => {
     const fetchPosts = async () => {
@@ -62,7 +64,7 @@ function App() {
         return post.id === Number(id) ? updatedPost : post;
       })
     );
-    history.push("/");
+    history.push("/posts");
   };
   const handleDelete = async (id) => {
     await destroyPost(id);
@@ -72,26 +74,28 @@ function App() {
   return (
     <div className="App">
       {/* <h1>Yak Yik</h1> */}
-      <Layout
-        currentUser={currentUser}
-        handleLogout={handleLogout}
+      <Switch >
+        <Route exact path='/'>
+          < Home
+            handleLogin={handleLogin}
+          />
+        </Route>
+        <Route exact path='/register'>
+          <Register
+            handleRegister={handleRegister}
+          />
+        </Route>
+        <Layout
+          currentUser={currentUser}
+          handleLogout={handleLogout}
 
-      >
+        >
 
-        <Switch >
-          <Route path='/login'>
-            <Login
-              handleLogin={handleLogin}
-            />
-          </Route>
-          <Route path='/register'>
-            <Register
-              handleRegister={handleRegister}
-            />
-          </Route>
+
+
           {currentUser && (
             <>
-              <Route exact path='/'>
+              <Route exact path='/posts'>
                 < Posts
                   posts={posts}
                   setPosts={setPosts}
@@ -115,7 +119,7 @@ function App() {
                 />
               </Route>
 
-              <Route exact path="/posts">
+              <Route exact path="/posts/new">
                 < Post
                   currentUser={currentUser}
                   posts={posts}
@@ -143,8 +147,9 @@ function App() {
             </>
           )}
 
-        </Switch>
-      </Layout>
+
+        </Layout>
+      </Switch>
     </div>
   );
 }

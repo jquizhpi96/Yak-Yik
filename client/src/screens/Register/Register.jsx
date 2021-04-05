@@ -1,14 +1,15 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import './Register.css'
+import Yak from "../../images/yak.png"
 
-export default function Login(props) {
+export default function Register(props) {
   const [formData, setFormData] = useState({
-    name: '',
+    username: '',
     email: '',
     password: ''
   })
   const { name, email, password } = formData;
-  const { handleLogin } = props;
+  const { handleRegister } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,13 +20,18 @@ export default function Login(props) {
   }
 
   return (
+    <div className="register-container">
+      
+      <img className="pic2"src={Yak} alt="yak"></img>
+      <div className ="register-form">
     <form onSubmit={(e)=>{
       e.preventDefault();
-      handleLogin(formData);
+      handleRegister(formData);
     }}>
-      <h3>Login</h3>
+      <h3 className = "register">Register</h3>
       <label>
-        name:
+            Name:
+                 <br/>
         <input
           type='text'
           name='name'
@@ -33,8 +39,10 @@ export default function Login(props) {
           onChange={handleChange}
         />
       </label>
+      <br />
       <label>
-        Email:
+            Email:
+            <br/>
         <input
           type='text'
           name='email'
@@ -44,7 +52,8 @@ export default function Login(props) {
       </label>
       <br />
       <label>
-        Password:
+            Password:
+            <br/>
         <input
           type='password'
           name='password'
@@ -53,8 +62,9 @@ export default function Login(props) {
         />
       </label>
       <br />
-      <Link to='/register'>Register</Link>
-      <button>Submit</button>
-    </form>
+      <button className="submit">Submit</button>
+        </form>
+        </div>
+      </div>
   )
 }

@@ -10,9 +10,8 @@ export default function Layout(props) {
   return (
     <div className="layout">
       
-      <Link to='/'>
-        <img className="yak" src={Yak} alt="yak"></img>
-        <h1 className="header">Yak Yik</h1>
+      <Link to='/posts'><h1 className="header">Yak Yik</h1>
+        <img className = "yak"src={Yak} alt="yak"></img>
       </Link>
      
       <Nav className="navbar" currentUser={currentUser} handleLogout={handleLogout}/>

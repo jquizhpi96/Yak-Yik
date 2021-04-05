@@ -1,13 +1,15 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import "./Login.css"
 
-export default function Register(props) {
+export default function Login(props) {
   const [formData, setFormData] = useState({
-    username: '',
+    name: '',
     email: '',
     password: ''
   })
   const { name, email, password } = formData;
-  const { handleRegister } = props;
+  const { handleLogin } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,23 +20,26 @@ export default function Register(props) {
   }
 
   return (
-    <form onSubmit={(e)=>{
+    <div className ="loginForm">
+    <form  className="form" onSubmit={(e)=>{
       e.preventDefault();
-      handleRegister(formData);
+      handleLogin(formData);
     }}>
-      <h3>Register</h3>
-      <label>
-        Name:
+      <h3 className= "login">Login</h3>
+      <label className = "label">
+          Name:
+             <br/>
         <input
           type='text'
           name='name'
           value={name}
           onChange={handleChange}
         />
-      </label>
-      <br />
-      <label>
-        Email:
+        </label>
+        <br />
+      <label className = "label">
+          Email:
+          <br/>
         <input
           type='text'
           name='email'
@@ -42,18 +47,23 @@ export default function Register(props) {
           onChange={handleChange}
         />
       </label>
-      <br />
-      <label>
-        Password:
+        <br />
+        
+      <label className = "label">
+          Password:
+          <br/>
         <input
           type='password'
           name='password'
           value={password}
           onChange={handleChange}
         />
-      </label>
+      </label >
       <br />
-      <button>Submit</button>
-    </form>
+        <Link to='/register'>Don't have an account? Register here.</Link>
+        <br/>
+      <button className="submit">Submit</button>
+      </form>
+      </div>
   )
 }
