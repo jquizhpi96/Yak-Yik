@@ -5,14 +5,16 @@ import Yak from "../../images/yak.png"
 
 
 function Home(props) {
-  const {handleLogin} = props
+  const {handleLogin, currentUser} = props
   return (
     <div className="home">
       <h1 className="title">Welcome to Yak Yik!</h1>
       <img className="pic"src={Yak} alt="yak"></img>
 
       <Login 
-      handleLogin={handleLogin}/>
+        handleLogin={handleLogin}
+        currentUser={currentUser}
+        />
     </div>
   );
 }

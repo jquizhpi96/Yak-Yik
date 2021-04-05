@@ -6,7 +6,9 @@ export default function Login(props) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    password: ''
+    password: '',
+    isError: false,
+    errorMsg: '',
   })
   const { name, email, password } = formData;
   const { handleLogin } = props;
@@ -18,9 +20,41 @@ export default function Login(props) {
       [name]: value
     }))
   }
+  const refresh = () => {
+    setFormData({ isError: false,name:"", password: "", email: "" });
+  };
 
+ if (formData.isError)  {
+    setFormData({
+      isError: true,
+      errorMsg: "Invalid Credentials",
+      password: "",
+     
+    });
+    setTimeout(refresh, 1500)
+  }
+  
+  const renderError = () => {
+    const toggleForm = formData.isError ? "danger" : "";
+    if (formData.isError) {
+      return (
+        <button className={toggleForm}>
+          {formData.errorMsg}
+        </button>
+      )
+    } else if (!name) {
+      return <p className="name-error">Please Enter Your Name</p>;
+    } else if (!password) {
+      return <p className="password-error">Please Enter Password</p>;
+    } else if (email.includes("@") !== true) {
+      return <p className="email-error">Invalid Email - must include @</p>;
+    } else {
+      return <button className="submit" >Sign In</button>;
+    }
+    
+  }
   return (
-    <div className ="loginForm">
+    <div className={formData.isError ? "sign-in-error" : "loginForm"}>
     <form  className="form" onSubmit={(e)=>{
       e.preventDefault();
       handleLogin(formData);
@@ -58,11 +92,14 @@ export default function Login(props) {
           value={password}
           onChange={handleChange}
         />
-      </label >
-      <br />
+        </label >
+        <br />
+        {renderError()}
+     
         <Link to='/register'>Don't have an account? Register here.</Link>
         <br/>
-      <button className="submit">Submit</button>
+        {/* <button className="submit">Submit</button> */}
+        
       </form>
       </div>
   )

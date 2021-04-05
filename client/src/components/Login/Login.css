@@ -1,4 +1,5 @@
-.loginForm {
+.loginForm,
+.sign-in-error {
   /* align-self: center; */
   padding: 1em;
   width: 50%;
@@ -8,6 +9,9 @@
   border-radius: 6px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
   background-color: white;
+}
+sign-in-error .danger {
+  background: #e57373;
 }
 form {
   display: flex;

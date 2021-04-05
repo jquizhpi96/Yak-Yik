@@ -43,10 +43,10 @@ export default function CreatePost(props) {
       
       <label>
         
-        <textarea
-          type="text"
-          name='content'
-          placeholder='whats happening?'
+          <textarea
+            type="text"
+            name='content'
+            placeholder='What is happening?'
           value={content}
           required
           onChange={handleChange}

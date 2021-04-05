@@ -42,7 +42,7 @@ export default function CreatePostUser(props) {
         <textarea
           type="text"
           name="content"
-          placeholder="whats happening?"
+          placeholder="What is happening?"
           value={content}
           required
           onChange={handleChange}

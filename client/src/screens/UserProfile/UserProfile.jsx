@@ -21,13 +21,14 @@ function UserProfile(props) {
   const { currentUser, posts, handleDelete, setPosts } = props;
 
   if (currentUser?.id === posts.user_id) {
+  
   }
-
+  
   return (
-    <div>
+    <div className= "user-profile">
       <h3 className ="greeting">
       
-        Hello {currentUser.name.slice(0, 2)} .... I mean User {currentUser.id}!
+        Hello {currentUser.name.charAt(0).toUpperCase()} .... I mean User {currentUser.id}!
       </h3>
       <CreatePostUser
         currentUser={currentUser}
@@ -41,7 +42,7 @@ function UserProfile(props) {
           .filter((post) => {
             return post.user_id === currentUser.id;
           })
-         .slice(0).reverse().map((post) => (
+         .reverse().map((post) => (
             <div className = "lol" key={post.id}>
               <p className="post">{post.content} </p>
              <div className="userContainer">

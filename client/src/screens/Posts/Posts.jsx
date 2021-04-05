@@ -8,27 +8,51 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments} from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { faTrashAlt} from '@fortawesome/free-solid-svg-icons'
-
+import { AZ, ZA, } from "../../utils/Sort"
 
 function Posts(props) {
-  const [comments, setComments] = useState([]);
   const { posts, setPosts, handleDelete, currentUser } = props;
   const [show, setShow] = useState(false);
   const icon = <FontAwesomeIcon className= "commentsbubble" icon={faComments} size="lg"/>
   const editIcon = <FontAwesomeIcon className="editIcon" icon={faEdit} size="lg"/>
   const trashIcon = <FontAwesomeIcon className="trashIcon" icon={faTrashAlt} size="lg"/>
-const [postId, setPostId] = useState('')
+  const [queriedLikes, setQueriedLikes] = useState([]);
+  const [sortType, setSortType] = useState([])
+  const [postId, setPostId] = useState('')
+  
   const toggleModal = () => {
     setShow(!show);
   };
+  
+  const handleSort = type => {
+    setSortType(type)
+    switch (type) {
+      case "null":
+        setQueriedLikes(queriedLikes)
+        break
+      case "like-ascending":
+        setQueriedLikes(AZ(queriedLikes))
+        break
+      case "like-descending":
+        setQueriedLikes(ZA(queriedLikes))
+        break
+      default:
+        break
+    }
+  }
+  const handleSubmit = event => {
+    event.preventDefault()
+    const newQueriedLikes= posts.filter(post => post.likes)
+    setQueriedLikes(newQueriedLikes, () => handleSort(sortType))
+  }
 
- 
   return (
   
     <div className="body">
       <CreatePost className="createPost" currentUser={currentUser} posts={posts} setPosts={setPosts} />
 
       <br />
+      
       <div className="index">
       {posts.slice(0).reverse().map((post) => (
         <div key={post.id}>

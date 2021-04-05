@@ -78,6 +78,8 @@ function App() {
         <Route exact path='/'>
           < Home
             handleLogin={handleLogin}
+            currentUser={currentUser}
+
           />
         </Route>
         <Route exact path='/register'>
