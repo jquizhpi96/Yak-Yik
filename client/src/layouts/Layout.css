@@ -66,15 +66,26 @@ h1.header,
     align-content: center;
     /* align-items: center; */
   }
-  h1.header,
-  .yak {
-    display: flex;
+  h1.header {
+    display: none;
     position: absolute;
+    margin-left: 0px;
     flex-wrap: wrap;
     align-self: center;
     font-size: 40px;
     margin-top: 0px;
-    margin: 0, auto;
-    align-items: center;
+    justify-content: center;
+  }
+  .yak {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    margin-left: 0;
+  }
+  .header {
+    right: 0;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    left: 0;
   }
 }

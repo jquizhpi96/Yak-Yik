@@ -40,7 +40,7 @@ export default function CreatePostUser(props) {
       }}
     >
       <label>
-        <textarea
+        <textarea className="user-post"
           type="text"
           name="content"
           placeholder="What is happening?"

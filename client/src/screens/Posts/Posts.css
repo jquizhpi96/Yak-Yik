@@ -66,17 +66,14 @@ div.lol {
   background-color: white;
   border-radius: 5px;
   border: 1px solid #9c9c9c;
+  width: 50vw;
+  margin-left: 60px;
 }
 
 a {
   margin: 0;
   margin-top: 15px;
 }
-
-/* .index {
-  overflow-y: scroll;
-  height: 50vh;
-} */
 
 .yes,
 .no {
@@ -92,4 +89,33 @@ a {
   cursor: pointer;
   margin: 20px;
   font-size: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .body {
+    margin-bottom: 100px;
+  }
+  textarea {
+    margin-top: 90px;
+    min-width: 75vw;
+    max-width: 75vw;
+    margin-left: 0;
+    padding: 30px;
+  }
+  div.lol {
+    width: 89vw;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .small {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 50vw;
+  }
+  .userContainer {
+    /* margin-bottom: 100px; */
+  }
 }

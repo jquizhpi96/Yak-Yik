@@ -10,10 +10,11 @@ export default function Layout(props) {
   const { currentUser, handleLogout } = props;
   return (
     <div className="layout">
-      
-      <Link to='/posts'><h1 className="header">Yak Yik</h1>
+          
+        <Link to='/posts'><h1 className="header">Yak Yik</h1>
         <img className = "yak"src={Yak} alt="yak"></img>
-      </Link>
+        </Link>
+        
       {currentUser && (
             <div className = "name">Welcome { currentUser.name.charAt(0).toUpperCase()}</div>
           )}

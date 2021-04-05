@@ -10,13 +10,11 @@
     position: fixed;
     bottom: 0;
     left: 0;
+    height: 1vh;
     min-width: 100%;
-    /* min-height: 65px; */
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    background-color: #7cfcd0;
+    /* flex-direction: row; */
+    background-color: #effff9;
     z-index: 999;
     margin: 0;
   }
@@ -25,7 +23,7 @@
     padding: 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    align-content: center;
+    justify-content: center;
   }
 
   li {

@@ -22,3 +22,21 @@ hr {
 .user-profile {
   height: 100%;
 }
+
+@media screen and (max-width: 480px) {
+  .user-profile {
+    height: 100vh;
+    margin-bottom: 100px;
+  }
+  .greeting {
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+  hr {
+    margin-top: 0px;
+  }
+  .posts {
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+}
