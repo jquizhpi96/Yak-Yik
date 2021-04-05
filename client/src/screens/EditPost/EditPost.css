@@ -1,0 +1,16 @@
+.edit-container {
+  height: 100vh;
+}
+
+.edit-button {
+  width: 10vw;
+  margin-top: 20px;
+  height: 5vh;
+  align-self: center;
+  font-family: "Nunito", sans-serif;
+  background-color: hotpink;
+  border: 2px rgb(216, 51, 134) solid;
+  border-radius: 10px;
+  font-weight: bold;
+  outline: none;
+}

@@ -14,7 +14,7 @@ import Register from "./screens/Register/Register";
 import PostDetail from "./screens/PostDetail/PostDetail";
 import UserProfile from "./screens/UserProfile/UserProfile";
 import Posts from "./screens/Posts/Posts";
-import EditPost from "./screens/EditPost";
+import EditPost from "./screens/EditPost/EditPost";
 import EditPostUser from "./screens/EditPostUser";
 import Post from "./screens/Post";
 import Home from "./screens/Home/Home";
