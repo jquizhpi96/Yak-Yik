@@ -5,6 +5,7 @@ import "./CreatePost.css"
 
 export default function CreatePost(props) {
   const history = useHistory()
+  // eslint-disable-next-line
   const [toggle, setToggle] = useState(false)
 
   const [formData, setFormData] = useState({

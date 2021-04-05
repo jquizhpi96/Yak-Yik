@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import "./CreatePostUser.css"
 export default function CreatePostUser(props) {
   const history = useHistory();
+  // eslint-disable-next-line
   const [toggle, setToggle] = useState(false);
 
   const [formData, setFormData] = useState({
