@@ -41,7 +41,7 @@ function CreateComment(props) {
           onChange={handleChange}
         />
 
-        <button>Submit</button>
+        <button className='post-button'>Submit</button>
       </form>
     
   );

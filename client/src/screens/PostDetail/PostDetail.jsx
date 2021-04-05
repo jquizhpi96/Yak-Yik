@@ -42,7 +42,7 @@ function PostDetail(props) {
     history.go(0);
   };
   if (!post) {
-    return <h4>Loading...</h4>;
+    return <h4 className='loading'>Loading...</h4>;
   }
 
   return (
