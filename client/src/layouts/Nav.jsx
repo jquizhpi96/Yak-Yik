@@ -14,9 +14,9 @@ return (
       
 
         <ul className="list">
-          {currentUser && (
+          {/* {currentUser && (
             <li>Welcome { currentUser.name.charAt(0).toUpperCase()}</li>
-          )}
+          )} */}
           <br/>
           <li><Link to='/users'>Profile</Link></li>
           <br/>

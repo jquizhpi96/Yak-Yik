@@ -13,6 +13,9 @@ export default function Layout(props) {
       <Link to='/posts'><h1 className="header">Yak Yik</h1>
         <img className = "yak"src={Yak} alt="yak"></img>
       </Link>
+      {currentUser && (
+            <div className = "name">Welcome { currentUser.name.charAt(0).toUpperCase()}</div>
+          )}
      
       <Nav className="navbar" currentUser={currentUser} handleLogout={handleLogout}/>
       
