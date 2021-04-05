@@ -1,0 +1,17 @@
+.likebutton {
+  height: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+button.like {
+  border: none;
+  background-color: Transparent;
+  outline: none;
+  border-radius: 30px;
+}
+
+.likebutton:hover {
+  background-color: rgb(173, 255, 214);
+  transition: 0.3s;
+}

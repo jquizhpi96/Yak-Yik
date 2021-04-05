@@ -1,0 +1,33 @@
+.sort-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 35px;
+}
+
+.sort {
+  background-color: #f77c00d7;
+  margin-right: 5px;
+  padding: 3px;
+  padding-top: 7px;
+  color: white;
+  font-family: "Luckiest Guy";
+  font-size: 18px;
+}
+
+.sort-select {
+  font-family: "Luckiest Guy", cursive;
+  padding: 5px;
+  padding-bottom: 0px;
+  font-size: 16px;
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 770px) {
+  .sort-container {
+    display: flex;
+    margin: 0;
+    margin-top: 15px;
+    justify-content: center;
+  }
+}

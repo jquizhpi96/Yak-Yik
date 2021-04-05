@@ -1,0 +1,50 @@
+.loginForm,
+.sign-in-error {
+  padding: 1em;
+  width: 50%;
+  height: 80%;
+  margin: 50px auto;
+  border: 2px solid #bcb8b1;
+  border-radius: 6px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+sign-in-error .danger {
+  background: #e57373;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+label {
+  margin: auto;
+}
+input {
+  width: 40vw;
+  padding: 0.6em 1em;
+
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 2px solid #e0e0e0;
+  outline: none;
+  transition: all 0.4s ease;
+}
+
+.submit {
+  width: 30%;
+  padding: 10px;
+  border: none;
+  background-color: #7cfcd0;
+  align-self: center;
+}
+
+.login {
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .loginForm {
+    width: 80vw;
+  }
+}

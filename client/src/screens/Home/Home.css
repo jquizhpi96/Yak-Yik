@@ -1,0 +1,17 @@
+.home {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+.pic {
+  height: 150px;
+  width: 150px;
+  align-self: center;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 50px;
+}

@@ -1,0 +1,95 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}
+.post {
+  color: #1f1f1f;
+  padding: 20px;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+.edit,
+.delete {
+  border: none;
+  background-color: Transparent;
+  outline: none;
+  border-radius: 30px;
+}
+
+.editIcon,
+.trashIcon {
+  cursor: pointer;
+}
+.small {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  width: 20vw;
+}
+.trashIcon {
+  margin-top: 5px;
+}
+textarea {
+  margin-left: 20px;
+  min-width: 50vw;
+  max-width: 50vw;
+  min-height: 5vh;
+  max-height: 5vh;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  overflow: auto;
+  padding: 50px;
+}
+
+div.lol {
+  border-style: curve;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #9c9c9c;
+}
+
+a {
+  margin: 0;
+  margin-top: 15px;
+}
+
+/* .index {
+  overflow-y: scroll;
+  height: 50vh;
+} */
+
+.yes,
+.no {
+  right: 65px;
+  bottom: 20px;
+  background-color: #7cfcd0;
+  border-style: none;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-style: solid;
+  border: 1px solid #9c9c9c;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 20px;
+}

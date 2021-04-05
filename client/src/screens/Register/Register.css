@@ -1,0 +1,40 @@
+.register-container {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form {
+  padding: 1em;
+  width: 50%;
+  height: 70%;
+  margin: 0px auto;
+  border: 2px solid #bcb8b1;
+  border-radius: 6px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  margin-bottom: 100px;
+}
+
+.pic2 {
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+}
+
+.register {
+  text-align: center;
+  font-size: 30px;
+}
+
+.link3 {
+  align-self: center;
+}
+@media screen and (max-width: 480px) {
+  .register-container {
+    height: 100vh;
+  }
+  .register-form {
+    width: 80vw;
+  }
+}
