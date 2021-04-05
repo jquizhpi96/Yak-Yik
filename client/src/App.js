@@ -74,7 +74,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <h1>Yak Yik</h1> */}
+
       <Switch>
         <Route exact path="/">
           <Home handleLogin={handleLogin} currentUser={currentUser} />
