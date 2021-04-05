@@ -98,11 +98,12 @@ a {
 @media screen and (max-width: 480px) {
   .body {
     margin-bottom: 100px;
+    width: 100vw;
   }
   textarea {
     margin: 0px;
     margin-top: 90px;
-    min-width: 10vw;
+    min-width: 40vw;
 
     margin-left: 0px;
     padding: 30px;
