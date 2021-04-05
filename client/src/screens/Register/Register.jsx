@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Register.css'
 import Yak from "../../images/yak.png"
 
@@ -22,7 +24,7 @@ export default function Register(props) {
   return (
     <div className="register-container">
       
-      <img className="pic2"src={Yak} alt="yak"></img>
+      <Link className="link3"to="/" ><img  className="pic2"src={Yak} alt="yak"></img></Link>
       <div className ="register-form">
     <form onSubmit={(e)=>{
       e.preventDefault();

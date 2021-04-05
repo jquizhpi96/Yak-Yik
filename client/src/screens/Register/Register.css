@@ -17,12 +17,16 @@
 }
 
 .pic2 {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   padding: 10px;
-  align-self: center;
 }
+
 .register {
   text-align: center;
   font-size: 30px;
+}
+
+.link3 {
+  align-self: center;
 }
