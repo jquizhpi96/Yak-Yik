@@ -1,0 +1,2 @@
+echo "/* /index.html 200" > public/_redirects
+

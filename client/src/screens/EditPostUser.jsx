@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 
-import { destroyPost, putPost } from "../services/posts";
+import {  putPost } from "../services/posts";
 
 
 function EditPostUser(props) {

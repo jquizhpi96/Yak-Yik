@@ -12,7 +12,7 @@ function CreateComment(props) {
   });
 
   const { content } = formData;
-  const { postId, currentUser, posts } = props;
+  const { postId, posts } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,7 +38,8 @@ function CreateComment(props) {
           placeholder="New Comment"
           value={content}
           required
-          onChange={handleChange}
+        onChange={handleChange}
+        comments ={comments}
         />
 
         <button className='post-button'>Submit</button>

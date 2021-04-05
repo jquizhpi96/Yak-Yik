@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from 'react'
+
 import CreatePost from "./CreatePost/CreatePost";
 import './Post.css'
 

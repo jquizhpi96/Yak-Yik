@@ -5,16 +5,15 @@ import { destroyComment } from "../../services/comments";
 import CreateComment from "../CreateComment/CreateComment";
 import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faComments} from '@fortawesome/free-solid-svg-icons'
-import { faEdit } from '@fortawesome/free-solid-svg-icons'
+
 import { faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 import "./PostDetail.css"
+
 function PostDetail(props) {
   const [post, setPost] = useState("");
   const { id } = useParams();
   const [comments, setComments] = useState([]);
-  const icon = <FontAwesomeIcon className= "commentsbubble" icon={faComments} size="lg"/>
-  const editIcon = <FontAwesomeIcon className="editIcon" icon={faEdit} size="lg"/>
+ 
   const trashIcon = <FontAwesomeIcon className="trashIcon" icon={faTrashAlt} size="lg"/>
   const params = useParams();
   const history = useHistory();

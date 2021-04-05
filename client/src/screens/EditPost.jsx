@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 
 function EditPost(props) {
-  {
+  
     const [formData, setFormData] = useState({
       content: ''
     })
@@ -55,6 +55,6 @@ function EditPost(props) {
       </form>
       
     )
-  }
+  
 }
   export default EditPost;
