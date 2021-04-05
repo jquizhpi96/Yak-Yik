@@ -94,7 +94,9 @@ a {
   margin: 20px;
   font-size: 20px;
 }
-
+.svg-inline--fa fa-trash-alt fa-w-14 fa-lg trashIcon {
+  margin-top: 7px;
+}
 @media screen and (max-width: 480px) {
   .body {
     margin-bottom: 100px;
