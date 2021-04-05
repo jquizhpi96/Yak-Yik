@@ -22,6 +22,7 @@ puts "#{User.count} users created"
 @post1 = Post.create!(content: 'Lorem Ipsum lol', user: @admin )
 @post2 = Post.create!(content: 'Here I am', user: @jason)
 @post3 = Post.create!(content: 'Yak Yik is cool', user: @janedoe)
+@post4= Post.create!(content: 'The vaccine will protect you from covid but it will not save you from my hands if you keep telling me you got the shot so you don’t need to wear your mask anymore.', user: @janedoe)
 
 puts "#{Post.count} posts created"
 
