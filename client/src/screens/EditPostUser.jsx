@@ -57,7 +57,7 @@ function EditPostUser(props) {
         handleUpdate(id, formData);
       }}>
         <h3>Edit Post</h3>
-        <div className="post-content">
+        <div className="post-content2">
         <label >
           Post:
         <input

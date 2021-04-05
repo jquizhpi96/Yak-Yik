@@ -11,10 +11,10 @@
     bottom: 0;
     left: 0;
     height: 3vh;
-    min-width: 98.5vw;
+    min-width: 99.5vw;
     display: flex;
 
-    border: 3px solid #9c9c9c;
+    border: 1px solid #9c9c9c;
     background-color: #75fac7;
     z-index: 999;
     margin: 0;

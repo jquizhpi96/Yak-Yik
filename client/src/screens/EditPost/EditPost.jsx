@@ -41,10 +41,10 @@ function EditPost(props) {
         e.preventDefault();
         handleUpdate(id, formData);
       }}>
-        <h3>Edit Post</h3>
+        <h3 className="edit-title">Edit Post</h3>
         <label >
           Post:
-        <input className="post-content"
+        <input className="post-content2"
             type='text'
             name='content'
             value={content}

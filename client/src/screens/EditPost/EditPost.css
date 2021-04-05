@@ -14,3 +14,35 @@
   font-weight: bold;
   outline: none;
 }
+
+.post-content2 {
+  border-style: curve;
+
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #9c9c9c;
+  padding: 40px;
+  /* width: 40vw; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 480px) {
+  .edit-container {
+    margin-top: 70px;
+    height: 80vh;
+  }
+  label {
+    font-size: 20px;
+  }
+  .edit-title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .edit-button {
+    width: 40vw;
+  }
+  .post-content2 {
+    width: 70vw;
+  }
+}

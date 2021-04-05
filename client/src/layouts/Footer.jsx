@@ -14,10 +14,10 @@ function Footer(props) {
 
   
  
-  const home = <FontAwesomeIcon className="footer-icon" icon={faHome} size="2x" />
-  const user = <FontAwesomeIcon className= "footer-icon" icon={faUser} size="2x"/>
-  const  note= <FontAwesomeIcon className= "footer-icon" icon={faStickyNote} size="2x"/>
-  const  signOut= <FontAwesomeIcon className= "footer-icon" icon={faSignOutAlt} size="2x"/>
+  const home = <FontAwesomeIcon className="footer-icon" icon={faHome} size="lg" />
+  const user = <FontAwesomeIcon className= "footer-icon" icon={faUser} size="lg"/>
+  const  note= <FontAwesomeIcon className= "footer-icon" icon={faStickyNote} size="lg"/>
+  const  signOut= <FontAwesomeIcon className= "footer-icon" icon={faSignOutAlt} size="lg"/>
 
 return (
     <div className="footer">
