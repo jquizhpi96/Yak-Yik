@@ -3,6 +3,7 @@ import Nav from './Nav';
 import './Layout.css'
 import { Link } from 'react-router-dom';
 import Yak from "../images/yak.png"
+import Footer from './Footer';
 
 
 export default function Layout(props) {
@@ -22,7 +23,7 @@ export default function Layout(props) {
       <div className="children">{props.children}
 
       </div>
-     
+     <Footer currentUser={currentUser} handleLogout={handleLogout}/>
     </div>
   )
 }

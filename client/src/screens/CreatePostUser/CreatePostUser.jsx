@@ -20,6 +20,7 @@ export default function CreatePostUser(props) {
     setToggle((curr) => !curr);
     
     history.push("/users");
+    history.go(0)
     
   };
 

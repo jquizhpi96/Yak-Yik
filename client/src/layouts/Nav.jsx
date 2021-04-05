@@ -20,7 +20,7 @@ return (
           <br/>
           <li><Link to='/users'>Profile</Link></li>
           <br/>
-           <li><Link to='/posts/new'>Post Something?</Link></li>
+           <li><Link to='/post/new'>Post Something?</Link></li>
           <br/>
              <li> <button className ="logout" onClick={handleLogout}>Logout</button></li>
          

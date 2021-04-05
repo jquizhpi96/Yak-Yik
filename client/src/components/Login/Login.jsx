@@ -11,7 +11,8 @@ export default function Login(props) {
     errorMsg: '',
   })
   const { name, email, password } = formData;
-  const { handleLogin } = props;
+  const { handleLogin, currentUser } = props;
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,11 +22,12 @@ export default function Login(props) {
     }))
   }
   const refresh = () => {
-    setFormData({ isError: false,name:"", password: "", email: "" });
+    setFormData({ isError: false, name:"",email: "" , password: ""});
   };
 
- if (formData.isError)  {
+  if (!formData )  {
     setFormData({
+     
       isError: true,
       errorMsg: "Invalid Credentials",
       password: "",
@@ -33,11 +35,12 @@ export default function Login(props) {
     });
     setTimeout(refresh, 1500)
   }
-  
+  // debugger 
   const renderError = () => {
     const toggleForm = formData.isError ? "danger" : "";
-    if (formData.isError) {
+    if (formData.isError){
       return (
+        
         <button className={toggleForm}>
           {formData.errorMsg}
         </button>
@@ -49,15 +52,17 @@ export default function Login(props) {
     } else if (email.includes("@") !== true) {
       return <p className="email-error">Invalid Email - must include @</p>;
     } else {
-      return <button className="submit" >Sign In</button>;
+      return <button className="submit" >Log In</button>;
     }
     
   }
+  
   return (
     <div className={formData.isError ? "sign-in-error" : "loginForm"}>
     <form  className="form" onSubmit={(e)=>{
       e.preventDefault();
-      handleLogin(formData);
+        handleLogin(formData);
+        
     }}>
       <h3 className= "login">Login</h3>
       <label className = "label">

@@ -1,0 +1,35 @@
+.footer {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    display: flex;
+  }
+  ul {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    /* min-height: 65px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    background-color: #7cfcd0;
+    z-index: 999;
+    margin: 0;
+  }
+
+  .footer-list {
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: center;
+  }
+
+  li {
+    margin: 0;
+    margin: 0, auto;
+  }
+}

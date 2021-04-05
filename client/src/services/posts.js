@@ -16,7 +16,7 @@ export const getUserPost = async (user_id) => {
 }
 
 export const postPost = async (postData) => {
-  const resp = await api.post("/posts", { post: postData });
+  const resp = await api.post("/posts/", { post: postData });
   return resp.data;
 };
 

@@ -1,6 +1,5 @@
 .loginForm,
 .sign-in-error {
-  /* align-self: center; */
   padding: 1em;
   width: 50%;
   height: 80%;
@@ -42,4 +41,10 @@ input {
 
 .login {
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .loginForm {
+    width: 80vw;
+  }
 }

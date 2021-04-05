@@ -1,53 +1,55 @@
-import './App.css';
-import Layout from './layouts/Layout';
-import { useState, useEffect } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
-import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import "./App.css";
+import Layout from "./layouts/Layout";
+import { useState, useEffect } from "react";
+import { Switch, Route, useHistory } from "react-router-dom";
+import {
+  loginUser,
+  registerUser,
+  removeToken,
+  verifyUser,
+} from "./services/auth";
 import { getAllPosts } from "./services/posts";
 import { destroyPost, putPost } from "./services/posts";
-// import CreatePost from './screens/CreatePost/CreatePost';
-import Login from './components/Login/Login';
-import Register from './screens/Register/Register';
-import PostDetail from './screens/PostDetail/PostDetail';
-import UserProfile from './screens/UserProfile/UserProfile';
-import Posts from './screens/Posts/Posts';
-import EditPost from './screens/EditPost';
-import EditPostUser from './screens/EditPostUser';
-import Post from './screens/Post';
-import Home from './screens/Home/Home';
+import Register from "./screens/Register/Register";
+import PostDetail from "./screens/PostDetail/PostDetail";
+import UserProfile from "./screens/UserProfile/UserProfile";
+import Posts from "./screens/Posts/Posts";
+import EditPost from "./screens/EditPost";
+import EditPostUser from "./screens/EditPostUser";
+import Post from "./screens/Post";
+import Home from "./screens/Home/Home";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const [posts, setPosts] = useState([]);
-  const history = useHistory()
-
+  const history = useHistory();
 
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
       setCurrentUser(userData);
-    }
+    };
     handleVerify();
-  }, [])
+  }, []);
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
     setCurrentUser(userData);
-    history.push('/posts');
-  }
+    history.push("/posts");
+  };
 
   const handleRegister = async (formData) => {
     const userData = await registerUser(formData);
     setCurrentUser(userData);
-    history.push('/posts');
-  }
+    history.push("/posts");
+  };
 
   const handleLogout = () => {
     setCurrentUser(null);
-    localStorage.removeItem('authToken');
+    localStorage.removeItem("authToken");
     removeToken();
-    history.push('/')
-  }
+    history.push("/");
+  };
   useEffect(() => {
     const fetchPosts = async () => {
       const postData = await getAllPosts();
@@ -55,7 +57,6 @@ function App() {
     };
     fetchPosts();
   }, []);
-
 
   const handleUpdate = async (id, postData) => {
     const updatedPost = await putPost(id, postData);
@@ -74,31 +75,18 @@ function App() {
   return (
     <div className="App">
       {/* <h1>Yak Yik</h1> */}
-      <Switch >
-        <Route exact path='/'>
-          < Home
-            handleLogin={handleLogin}
-            currentUser={currentUser}
-
-          />
+      <Switch>
+        <Route exact path="/">
+          <Home handleLogin={handleLogin} currentUser={currentUser} />
         </Route>
-        <Route exact path='/register'>
-          <Register
-            handleRegister={handleRegister}
-          />
+        <Route exact path="/register">
+          <Register handleRegister={handleRegister} />
         </Route>
-        <Layout
-          currentUser={currentUser}
-          handleLogout={handleLogout}
-
-        >
-
-
-
+        <Layout currentUser={currentUser} handleLogout={handleLogout}>
           {currentUser && (
             <>
-              <Route exact path='/posts'>
-                < Posts
+              <Route exact path="/posts">
+                <Posts
                   posts={posts}
                   setPosts={setPosts}
                   currentUser={currentUser}
@@ -106,14 +94,17 @@ function App() {
                   postId={posts.Id}
                 />
               </Route>
-              <Route exact path='/posts/:id'>
-                <PostDetail
+              <Route exact path="/post/new">
+                <Post
                   currentUser={currentUser}
                   posts={posts}
-
+                  setPosts={setPosts}
                 />
               </Route>
-              <Route exact path='/posts/:id/edit'>
+              <Route exact path="/posts/:id">
+                <PostDetail currentUser={currentUser} posts={posts} />
+              </Route>
+              <Route exact path="/posts/:id/edit">
                 <EditPost
                   posts={posts}
                   currentUser={currentUser}
@@ -121,35 +112,19 @@ function App() {
                 />
               </Route>
 
-              <Route exact path="/posts/new">
-                < Post
-                  currentUser={currentUser}
-                  posts={posts}
-                  setPosts={setPosts}
-                />
-              </Route>
-
-              <Route exact path='/users'>
+              <Route exact path="/users">
                 <UserProfile
                   currentUser={currentUser}
                   posts={posts}
                   setPosts={setPosts}
                   handleDelete={handleDelete}
-
                 />
               </Route>
-              <Route exact path='/users/:id/posts/:id/edit'>
-                <EditPostUser
-                  currentUser={currentUser}
-                  posts={posts}
-
-                />
+              <Route exact path="/users/:id/posts/:id/edit">
+                <EditPostUser currentUser={currentUser} posts={posts} />
               </Route>
-
             </>
           )}
-
-
         </Layout>
       </Switch>
     </div>

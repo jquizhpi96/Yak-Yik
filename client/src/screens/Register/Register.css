@@ -30,3 +30,11 @@
 .link3 {
   align-self: center;
 }
+@media screen and (max-width: 480px) {
+  .register-container {
+    height: 100vh;
+  }
+  .register-form {
+    width: 80vw;
+  }
+}
