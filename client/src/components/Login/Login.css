@@ -42,6 +42,7 @@ input {
   border: none;
   background-color: #7cfcd0;
   align-self: center;
+  outline: none;
 }
 .submit:hover {
   background-color: rgb(255, 105, 223);
