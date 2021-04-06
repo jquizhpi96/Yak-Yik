@@ -1,13 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
+import { motion } from "framer-motion"
 import { putPost } from "../services/posts";
 
 function EditPostUser(props) {
-  // eslint-disable-next-line
   const [userPosts, setUserPosts] = useState([]);
-
   const [formData, setFormData] = useState({
     content: "",
   });
@@ -47,8 +45,17 @@ function EditPostUser(props) {
       [name]: value,
     }));
   };
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
 
   return (
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={variants}
+    >
     <div className="edit-container">
       <form
         onSubmit={(e) => {
@@ -72,7 +79,8 @@ function EditPostUser(props) {
         </div>
         <button className="edit-button">Submit</button>
       </form>
-    </div>
+      </div>
+      </motion.div>
   );
 }
 export default EditPostUser;

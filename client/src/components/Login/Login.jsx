@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import {  motion } from "framer-motion";
 
 export default function Login(props) {
   const [formData, setFormData] = useState({
@@ -45,8 +46,16 @@ export default function Login(props) {
       return <button className="submit">Log In</button>;
     }
   };
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
 
   return (
+    <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}>
     <div className={formData.isError ? "sign-in-error" : "loginForm"}>
       <form
         className="form"
@@ -90,6 +99,7 @@ export default function Login(props) {
         <Link to="/register">Don't have an account? Register here.</Link>
         <br />
       </form>
-    </div>
+      </div>
+      </motion.div>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import {  motion } from "framer-motion";
 import "./Register.css";
 import Yak from "../../images/yak.png";
 
@@ -21,8 +21,18 @@ export default function Register(props) {
     }));
   };
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
   return (
+    <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants}>
     <div className="register-container">
+     
+   
       <Link className="link3" to="/">
         <img className="pic2" src={Yak} alt="yak"></img>
       </Link>
@@ -71,7 +81,10 @@ export default function Register(props) {
           <br/>
           <Link to="/"> Have an account? Log in here.</Link>
         </form>
+          </div>
+         
+      
       </div>
-    </div>
+      </motion.div>
   );
 }

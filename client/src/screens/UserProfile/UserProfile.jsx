@@ -8,6 +8,8 @@ import { faComments } from "@fortawesome/free-solid-svg-icons";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import "./UserProfile.css";
+import { motion } from "framer-motion"
+
 
 function UserProfile(props) {
   const [show, setShow] = useState(false);
@@ -24,12 +26,21 @@ function UserProfile(props) {
     setShow(!show);
   };
 
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
   const { currentUser, posts, handleDelete, setPosts } = props;
 
   if (currentUser?.id === posts.user_id) {
   }
 
   return (
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={variants}
+    >
     <div className="user-profile">
       <h3 className="greeting">
         Hello {currentUser.name.charAt(0).toUpperCase()} .... I mean User{" "}
@@ -91,7 +102,8 @@ function UserProfile(props) {
           </button>
         </Modal>
       )}
-    </div>
+      </div>
+      </motion.div>
   );
 }
 

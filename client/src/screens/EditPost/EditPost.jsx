@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion"
+
 import "./EditPost.css";
 
 function EditPost(props) {
@@ -29,8 +31,17 @@ function EditPost(props) {
       [name]: value,
     }));
   };
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
 
   return (
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={variants}
+    >
     <div className="edit-container">
       <form
         onSubmit={(e) => {
@@ -52,7 +63,8 @@ function EditPost(props) {
         </label>
         <button className="edit-button">Submit</button>
       </form>
-    </div>
+      </div>
+      </motion.div>
   );
 }
 export default EditPost;

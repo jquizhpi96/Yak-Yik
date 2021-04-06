@@ -6,6 +6,8 @@ import CreateComment from "../CreateComment/CreateComment";
 import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion"
+
 import "./PostDetail.css";
 
 function PostDetail(props) {
@@ -40,8 +42,16 @@ function PostDetail(props) {
   if (!post) {
     return <h4 className="loading">Loading...</h4>;
   }
-
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
   return (
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={variants}
+    >
     <div className="post-detail">
       <div className="post-content">{post.content}</div>
       <p>{post.comments.length} comments</p>
@@ -69,7 +79,8 @@ function PostDetail(props) {
       </div>
 
       <CreateComment postId={post.id} currentUser={currentUser} />
-    </div>
+      </div>
+      </motion.div>
   );
 }
 

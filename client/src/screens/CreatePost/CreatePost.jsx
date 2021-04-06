@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { postPost } from "../../services/posts";
 import { useHistory } from "react-router-dom";
+import { motion } from "framer-motion"
 import "./CreatePost.css";
 
 export default function CreatePost(props) {
@@ -31,8 +32,17 @@ export default function CreatePost(props) {
       [name]: value,
     }));
   };
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
 
   return (
+    <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={variants}
+    >
     <div className="post-form">
       <form
         onSubmit={(e) => {
@@ -52,6 +62,7 @@ export default function CreatePost(props) {
         </label>
         <button className="post-button">Post</button>
       </form>
-    </div>
+      </div>
+      </motion.div>
   );
 }

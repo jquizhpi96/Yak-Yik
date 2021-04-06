@@ -1,6 +1,7 @@
 import "./App.css";
 import Layout from "./layouts/Layout";
 import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Switch, Route, useHistory } from "react-router-dom";
 import {
   loginUser,
@@ -72,61 +73,101 @@ function App() {
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
 
+  const pageVariants = {
+    initial: {
+      opacity: 0,
+      x: "-100vw",
+      scale: 0.8
+    },
+    in: {
+      opacity: 1,
+      x: 0,
+      scale: 1
+    },
+    out: {
+      opacity: 0,
+      x: "100vw",
+      scale: 1.2
+    }
+  };
+
+  const pageTransition = {
+    type: "tween",
+    ease: "anticipate",
+    duration: 0.5
+  };
+
+  const pageStyle = {
+    position: "absolute"
+  };
+  const variants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
   return (
     <div className="App">
+      <AnimatePresence>
+        {/* <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={variants} */}
 
-      <Switch>
-        <Route exact path="/">
-          <Home handleLogin={handleLogin} currentUser={currentUser} />
-        </Route>
-        <Route exact path="/register">
-          <Register handleRegister={handleRegister} />
-        </Route>
-        <Layout currentUser={currentUser} handleLogout={handleLogout}>
-          {currentUser && (
-            <>
-              <Route exact path="/posts">
-                <Posts
-                  posts={posts}
-                  setPosts={setPosts}
-                  currentUser={currentUser}
-                  handleDelete={handleDelete}
-                  postId={posts.Id}
-                />
-              </Route>
-              <Route exact path="/post/new">
-                <Post
-                  currentUser={currentUser}
-                  posts={posts}
-                  setPosts={setPosts}
-                />
-              </Route>
-              <Route exact path="/posts/:id">
-                <PostDetail currentUser={currentUser} posts={posts} />
-              </Route>
-              <Route exact path="/posts/:id/edit">
-                <EditPost
-                  posts={posts}
-                  currentUser={currentUser}
-                  handleUpdate={handleUpdate}
-                />
-              </Route>
 
-              <Route exact path="/users">
-                <UserProfile
-                  currentUser={currentUser}
-                  posts={posts}
-                  setPosts={setPosts}
-                  handleDelete={handleDelete}
-                />
-              </Route>
-              <Route exact path="/users/:id/posts/:id/edit">
-                <EditPostUser currentUser={currentUser} posts={posts} />
-              </Route>
-            </>
-          )}
-        </Layout>
-      </Switch>
+
+        <Switch>
+          <Route exact path="/">
+            <Home handleLogin={handleLogin} currentUser={currentUser} />
+          </Route>
+          <Route exact path="/register">
+            <Register handleRegister={handleRegister} />
+          </Route>
+          <Layout currentUser={currentUser} handleLogout={handleLogout}>
+            {currentUser && (
+              <>
+                <Route exact path="/posts">
+                  <Posts
+                    posts={posts}
+                    setPosts={setPosts}
+                    currentUser={currentUser}
+                    handleDelete={handleDelete}
+                    postId={posts.Id}
+                  />
+                </Route>
+                <Route exact path="/post/new">
+                  <Post
+                    currentUser={currentUser}
+                    posts={posts}
+                    setPosts={setPosts}
+                  />
+                </Route>
+                <Route exact path="/posts/:id">
+                  <PostDetail currentUser={currentUser} posts={posts} />
+                </Route>
+                <Route exact path="/posts/:id/edit">
+                  <EditPost
+                    posts={posts}
+                    currentUser={currentUser}
+                    handleUpdate={handleUpdate}
+                  />
+                </Route>
+
+                <Route exact path="/users">
+                  <UserProfile
+                    currentUser={currentUser}
+                    posts={posts}
+                    setPosts={setPosts}
+                    handleDelete={handleDelete}
+                  />
+                </Route>
+                <Route exact path="/users/:id/posts/:id/edit">
+                  <EditPostUser currentUser={currentUser} posts={posts} />
+                </Route>
+              </>
+            )}
+          </Layout>
+        </Switch>
+        {/* </motion.div> */}
+      </AnimatePresence>
     </div>
   );
 }
