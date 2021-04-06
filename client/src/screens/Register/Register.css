@@ -36,5 +36,9 @@
   }
   .register-form {
     width: 80vw;
+    height: 50vh;
+  }
+  .register {
+    margin: 0;
   }
 }
