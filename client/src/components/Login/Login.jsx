@@ -64,7 +64,7 @@ export default function Login(props) {
         handleLogin(formData);
         
     }}>
-      <h3 className= "login">Login</h3>
+      <h3 className= "login">Log In</h3>
       <label className = "label">
           Name:
              <br/>

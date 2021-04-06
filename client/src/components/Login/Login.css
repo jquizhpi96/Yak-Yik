@@ -51,6 +51,7 @@ input {
 
 .login {
   text-align: center;
+  font-size: 28px;
 }
 
 @media screen and (max-width: 480px) {
