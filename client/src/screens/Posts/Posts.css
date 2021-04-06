@@ -120,7 +120,7 @@ a {
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-    width: 50vw;
+    width: 60vw;
   }
   .userContainer {
     padding-top: 20px;
