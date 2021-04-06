@@ -1,13 +1,10 @@
 .layout {
-  /* display: flex;
-  flex-direction: column; */
   display: grid;
   grid-template-columns: 0.5fr, 1fr, 1fr;
   grid-template-rows: 1fr, 1fr, 1fr;
   grid-template-areas:
     "h h h "
     "b b b";
-  /* height: 100%; */
 }
 
 header {
@@ -23,15 +20,17 @@ h1.header,
   font-size: 40px;
   margin-top: 10px;
 }
+h1.header:hover {
+  color: rgb(255, 0, 200);
+  transition: 0.3s;
+}
 
 .yak {
   height: 60px;
   left: 140px;
   top: 15px;
 }
-/* .navbar {
-  grid-area: n;
-} */
+
 .children {
   display: flex;
   flex-direction: row;
@@ -39,13 +38,9 @@ h1.header,
   margin: 0 auto;
   margin-top: 70px;
   grid-area: b;
-
-  /* position: relative; */
 }
 
 .name {
-  /* display: flex;
-  flex-direction: row-reverse; */
   position: fixed;
   right: 55px;
   top: 35px;

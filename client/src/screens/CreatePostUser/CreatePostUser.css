@@ -1,3 +1,8 @@
 .user-post {
   margin-top: 50px;
 }
+
+button.post-button:hover {
+  background-color: rgb(255, 105, 223);
+  transition: 0.3s;
+}

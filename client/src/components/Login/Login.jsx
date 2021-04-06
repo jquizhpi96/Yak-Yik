@@ -35,7 +35,7 @@ export default function Login(props) {
     });
     setTimeout(refresh, 1500)
   }
-  // debugger 
+ 
   const renderError = () => {
     const toggleForm = formData.isError ? "danger" : "";
     if (formData.isError){
@@ -103,7 +103,7 @@ export default function Login(props) {
      
         <Link to='/register'>Don't have an account? Register here.</Link>
         <br/>
-        {/* <button className="submit">Submit</button> */}
+        
         
       </form>
       </div>

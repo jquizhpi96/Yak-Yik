@@ -1,12 +1,3 @@
-/* .div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 100px 100px;
-  grid-template-areas:
-    "a a"
-    "a b"
-    "a b";
-} */
 .nav {
   display: flex;
   position: fixed;
@@ -24,6 +15,11 @@ a {
   padding-left: 30px;
 }
 
+li,
+a:hover {
+  color: rgb(255, 0, 200);
+  transition: 0.3s;
+}
 .link {
   margin: 100px;
 }
@@ -38,7 +34,9 @@ a {
   cursor: pointer;
   padding: 0;
 }
-
+.logout:hover {
+  color: rgb(255, 0, 200);
+}
 @media screen and (max-width: 480px) {
   .nav {
     display: none;

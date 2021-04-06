@@ -7,16 +7,13 @@ import './Nav.css'
 function Nav(props) {
   const {  handleLogout } = props;
   
-  // let newName = currentUser.name.split(' ').map((name) => name.charAt(0).toUpperCase() + name.slice(1)).join(' ')
   
 return (
     <div className="nav">
       
 
         <ul className="list">
-          {/* {currentUser && (
-            <li>Welcome { currentUser.name.charAt(0).toUpperCase()}</li>
-          )} */}
+         
           <br/>
           <li><Link to='/users'>Profile</Link></li>
           <br/>
@@ -25,8 +22,7 @@ return (
              <li> <button className ="logout" onClick={handleLogout}>Logout</button></li>
          
             </ul>
-            {/* :
-            <Link to='/'>Login/Register</Link> */}
+            
             
         
       

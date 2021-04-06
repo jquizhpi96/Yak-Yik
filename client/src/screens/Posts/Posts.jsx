@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComments} from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { faTrashAlt} from '@fortawesome/free-solid-svg-icons'
-// import { AZ, ZA, } from "../../utils/Sort"
 
 function Posts(props) {
   const { posts, setPosts, handleDelete, currentUser } = props;
@@ -16,36 +15,13 @@ function Posts(props) {
   const icon = <FontAwesomeIcon className= "commentsbubble" icon={faComments} size="lg"/>
   const editIcon = <FontAwesomeIcon className="editIcon" icon={faEdit} size="lg"/>
   const trashIcon = <FontAwesomeIcon className="trashIcon" icon={faTrashAlt} size="lg"/>
-  // const [queriedLikes, setQueriedLikes] = useState([]);
-  // const [sortType, setSortType] = useState([])
   const [postId, setPostId] = useState('')
   
   const toggleModal = () => {
     setShow(!show);
   };
   
-  // const handleSort = type => {
-  //   setSortType(type)
-  //   switch (type) {
-  //     case "null":
-  //       setQueriedLikes(queriedLikes)
-  //       break
-  //     case "like-ascending":
-  //       setQueriedLikes(AZ(queriedLikes))
-  //       break
-  //     case "like-descending":
-  //       setQueriedLikes(ZA(queriedLikes))
-  //       break
-  //     default:
-  //       break
-  //   }
-  // }
-  // const handleSubmit = event => {
-  //   event.preventDefault()
-  //   const newQueriedLikes= posts.filter(post => post.likes)
-  //   setQueriedLikes(newQueriedLikes, () => handleSort(sortType))
-  // }
-
+ 
 
   return (
   
@@ -63,7 +39,7 @@ function Posts(props) {
           
           {currentUser?.id === post.user_id && (
             <div className="userContainer" key={post.id}>
-              {/* <button>Like</button> */}
+            
               <div className = "small">
               <Likes allLikes={post.likes} posts={posts} postId={post.id} />
               <Link to={`/posts/${post.id}`}>

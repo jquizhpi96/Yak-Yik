@@ -33,6 +33,9 @@
   }
   footer-icon {
     color: rgb(37, 37, 37);
-    /* height: 100px; */
+  }
+  footer-icon:hover {
+    color: white;
+    transition: 0.3s;
   }
 }
