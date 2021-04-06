@@ -1,5 +1,4 @@
 import React from 'react';
-
 import CreatePost from "./CreatePost/CreatePost";
 import './Post.css'
 

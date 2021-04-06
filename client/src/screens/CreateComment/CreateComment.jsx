@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { postComment } from "../../services/comments";
 import { useHistory } from "react-router-dom";
-import './CreateComment.css'
+import "./CreateComment.css";
 
 function CreateComment(props) {
   const history = useHistory();
-
   const [comments, setComments] = useState([]);
   const [formData, setFormData] = useState({
     content: "",
@@ -30,21 +29,20 @@ function CreateComment(props) {
   };
 
   return (
-    
-      <form onSubmit={handleComment}>
-        <input className = "create-comment"
-          type="text"
-          name="content"
-          placeholder="New Comment"
-          value={content}
-          required
+    <form onSubmit={handleComment}>
+      <input
+        className="create-comment"
+        type="text"
+        name="content"
+        placeholder="New Comment"
+        value={content}
+        required
         onChange={handleChange}
-        comments ={comments}
-        />
+        comments={comments}
+      />
 
-        <button className='post-button'>Submit</button>
-      </form>
-    
+      <button className="post-button">Submit</button>
+    </form>
   );
 }
 

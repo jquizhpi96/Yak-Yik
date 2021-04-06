@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { createLike, getAllLikes } from "../services/likes";
-import Yak from "../images/yak.png"
-import './Likes.css'
+import Yak from "../images/yak.png";
+import "./Likes.css";
 
 function Likes(props) {
   const [likes, setLikes] = useState([]);
@@ -10,9 +10,9 @@ function Likes(props) {
   useEffect(() => {
     const fetchLikes = async () => {
       const resp = await getAllLikes(postId);
-      setLikes(resp)
+      setLikes(resp);
     };
-    fetchLikes()
+    fetchLikes();
   }, [allLikes, postId]);
 
   const handleLike = async () => {
@@ -22,12 +22,10 @@ function Likes(props) {
 
   return (
     <div className="likes-container">
-      <button className= "like"><img src={Yak} alt="Yak"
-        
-       className="likebutton"
-        onClick={handleLike} />{likes?.length}
+      <button className="like">
+        <img src={Yak} alt="Yak" className="likebutton" onClick={handleLike} />
+        {likes?.length}
       </button>
-      {/* <p>{likes?.length}</p> */}
     </div>
   );
 }

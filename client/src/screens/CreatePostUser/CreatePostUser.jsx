@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { postPost } from "../../services/posts";
 import { useHistory } from "react-router-dom";
-import "./CreatePostUser.css"
+import "./CreatePostUser.css";
 export default function CreatePostUser(props) {
   const history = useHistory();
   // eslint-disable-next-line
@@ -17,12 +17,11 @@ export default function CreatePostUser(props) {
   const handleCreate = async (postData) => {
     const newPost = await postPost(postData);
     setPosts((prevState) => [...prevState, newPost]);
-    
+
     setToggle((curr) => !curr);
-    
+
     history.push("/users");
-    history.go(0)
-    
+    history.go(0);
   };
 
   const handleChange = (e) => {
@@ -41,7 +40,8 @@ export default function CreatePostUser(props) {
       }}
     >
       <label>
-        <textarea className="user-post"
+        <textarea
+          className="user-post"
           type="text"
           name="content"
           placeholder="What is happening?"
@@ -50,7 +50,7 @@ export default function CreatePostUser(props) {
           onChange={handleChange}
         />
       </label>
-      <button className= 'post-button'>Post</button>
+      <button className="post-button">Post</button>
     </form>
   );
 }
