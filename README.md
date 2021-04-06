@@ -159,6 +159,6 @@ src
 
 ## Code Showcase
 
-![image](Screen Shot 2021-04-06 at 9.14.37 AM.png)
+![image](https://github.com/jquizhpi96/Yak-Yik/blob/main/Screen%20Shot%202021-04-06%20at%209.14.37%20AM.png)
 
 ## Code Issues & Resolutions
