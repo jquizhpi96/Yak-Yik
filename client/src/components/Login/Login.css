@@ -30,6 +30,11 @@ input {
   outline: none;
   transition: all 0.4s ease;
 }
+.email-error,
+.password-error,
+.name-error {
+  color: red;
+}
 
 .submit {
   width: 30%;
@@ -37,6 +42,10 @@ input {
   border: none;
   background-color: #7cfcd0;
   align-self: center;
+}
+.submit:hover {
+  background-color: rgb(255, 105, 223);
+  transition: 0.3s;
 }
 
 .login {
