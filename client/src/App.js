@@ -73,47 +73,9 @@ function App() {
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   };
 
-  const pageVariants = {
-    initial: {
-      opacity: 0,
-      x: "-100vw",
-      scale: 0.8
-    },
-    in: {
-      opacity: 1,
-      x: 0,
-      scale: 1
-    },
-    out: {
-      opacity: 0,
-      x: "100vw",
-      scale: 1.2
-    }
-  };
-
-  const pageTransition = {
-    type: "tween",
-    ease: "anticipate",
-    duration: 0.5
-  };
-
-  const pageStyle = {
-    position: "absolute"
-  };
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  }
   return (
     <div className="App">
       <AnimatePresence>
-        {/* <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={variants} */}
-
-
-
         <Switch>
           <Route exact path="/">
             <Home handleLogin={handleLogin} currentUser={currentUser} />
@@ -166,7 +128,6 @@ function App() {
             )}
           </Layout>
         </Switch>
-        {/* </motion.div> */}
       </AnimatePresence>
     </div>
   );

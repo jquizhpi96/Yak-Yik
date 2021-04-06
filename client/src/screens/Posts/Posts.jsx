@@ -28,10 +28,7 @@ function Posts(props) {
   const toggleModal = () => {
     setShow(!show);
   };
-  const variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  }
+
   const pageVariants = {
     initial: {
       opacity: 0,
