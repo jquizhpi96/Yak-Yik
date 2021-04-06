@@ -50,7 +50,7 @@ export default function CreatePost(props) {
           handleCreate(formData);
         }}
       >
-        <label>
+        <label className="create-form">
           <textarea
             type="text"
             name="content"

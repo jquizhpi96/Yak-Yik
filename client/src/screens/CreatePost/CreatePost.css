@@ -13,3 +13,12 @@
   border-radius: 10px;
   cursor: pointer;
 }
+@media screen and (max-width: 375px) {
+  label.create-form {
+    margin-bottom: 0;
+    margin-top: 100px;
+  }
+  .post-form {
+    height: 35vh;
+  }
+}
