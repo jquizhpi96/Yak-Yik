@@ -18,11 +18,10 @@ function PostDetail(props) {
   const params = useParams();
   const history = useHistory();
 
-  console.log(params);
+  
 
   const { currentUser } = props;
-  console.log(currentUser);
-  console.log(comments);
+ 
 
   useEffect(() => {
     const fetchPost = async () => {
