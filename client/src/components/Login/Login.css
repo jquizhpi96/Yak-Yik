@@ -73,4 +73,7 @@ input {
   input {
     width: 60vw;
   }
+  .submit {
+    width: 60vw;
+  }
 }
