@@ -68,8 +68,8 @@ function UserProfile(props) {
           toggleModal={toggleModal}
         >
           <p>Are you sure?</p>
-          <button onClick={() => setShow(false)}>no</button>
-          <button
+          <button className="no"onClick={() => setShow(false)}>no</button>
+          <button className="yes"
             onClick={() => {
               handleDelete(show);
               setShow(false);

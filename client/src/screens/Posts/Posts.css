@@ -73,7 +73,14 @@ div.lol {
   width: 50vw;
   margin-left: 60px;
 }
-
+.editIcon:hover,
+.trashIcon:hover {
+  color: rgb(255, 60, 213);
+  transition: 0.3s;
+}
+button {
+  outline: none;
+}
 a {
   margin: 0;
   margin-top: 15px;
