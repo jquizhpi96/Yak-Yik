@@ -9,6 +9,9 @@
   flex-direction: column;
   justify-content: center;
 }
+.post-detail {
+  height: 100vh;
+}
 .comment-container {
   margin: 0 auto;
 
@@ -51,11 +54,12 @@
     margin-top: 90px;
     width: 77vw;
   }
+
   .user-comment {
     width: 75vw;
   }
   div.comment-container {
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
   .create-comment {
     padding: 10px;
