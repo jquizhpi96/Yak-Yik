@@ -31,13 +31,15 @@ hr {
   .greeting {
     margin-top: 100px;
     margin-bottom: 0px;
+    font-size: 27px;
   }
   hr {
     margin-top: 0px;
   }
   .posts {
     margin-bottom: 5px;
-    margin-left: 20px;
+    margin-left: 18px;
+    font-size: 18px;
   }
   .user-container {
     padding-top: 0px;
