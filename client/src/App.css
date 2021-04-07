@@ -4,3 +4,9 @@
   font-family: "Nunito", sans-serif;
   color: rgb(100, 100, 100);
 }
+
+@media screen and (max-width: 480px) {
+  .App {
+    width: 100vw;
+  }
+}

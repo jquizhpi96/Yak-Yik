@@ -1,6 +1,6 @@
-.post-content {
+div.post-content {
   border-style: curve;
-
+  max-width: 40vw;
   background-color: white;
   border-radius: 5px;
   border: 1px solid #9c9c9c;
